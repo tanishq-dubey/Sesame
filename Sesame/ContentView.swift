@@ -8,34 +8,58 @@
 import SwiftUI
 import CoreData
 
-struct Person: Identifiable {
-     let id = UUID()
-     var name: String
-     var phoneNumber: String
- }
-
-var staff = [
-    Person(name: "Juan Chavez", phoneNumber: "(408) 555-4301"),
-    Person(name: "Mei Chen", phoneNumber: "(919) 555-2481")
-]
-
 struct ContentView: View {
+    @State var otpList = [
+        try! OTPItem("otpauth://totp/DWS%20LLC.:admin@dws.rip?secret=SESAMETEST&issuer=DWS%20LLC.&algorithm=SHA1&digits=6&period=30"),
+        try! OTPItem("otpauth://hotp/DWS%20LLC.:admin@dws.rip?secret=SESAMETEST&algorithm=SHA1&digits=6&period=30")
+    ]
+    
     var body: some View {
-        TOTPList()
+        NavigationStack{
+            TOTPList(otpList: $otpList)
+                .navigationTitle("Sesame")
+                .toolbar{
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Button("Edit") {
+                            print("hello")
+                        }
+                    }
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button("Add New") {
+                            print("hello")
+                        }
+                    }
+                }
+        }
+    }
+    
+    func addOTP() {
+        
     }
 }
 
 struct TOTPRowView: View {
-    var TOTPItem: Person
+    var TOTPItem: OTPItem
     var body: some View {
-        Text(TOTPItem.name)
+        VStack{
+            Text(TOTPItem.secret)
+            HStack{
+                Text(TOTPItem.issuer)
+                    .font(.subheadline)
+                Spacer()
+                Text(TOTPItem.type.description)
+            }
+            
+        }
+        
     }
 }
 
 struct TOTPList: View {
+    @Binding var otpList: [OTPItem]
     var body: some View {
-        List(staff) { person in
-            TOTPRowView(TOTPItem: person)
+        List(otpList) { otp in
+            TOTPRowView(TOTPItem: otp)
         }
     }
 }
