@@ -10,13 +10,13 @@ import Base32
 import CryptoKit
 import CommonCrypto
 
-enum OTPAlgorithm {
+enum OTPAlgorithm: Codable {
     case SHA1
     case SHA256
     case SHA512
 }
 
-enum OTPType: CustomStringConvertible {
+enum OTPType: Codable, CustomStringConvertible {
     case HOTP
     case TOTP
     
@@ -28,12 +28,12 @@ enum OTPType: CustomStringConvertible {
     }
 }
 
-enum OTPError: Error {
+enum OTPError: Codable, Error {
     case parsingError(reason: String)
     case malformedInput
 }
 
-class OTPItem: ObservableObject, Identifiable {
+class OTPItem: Identifiable, Codable {
     /// A OTPItem represents a single OTP (TOTP or HOTP) key.
     /// This item is generated via QR code or URL in the following format:
     
@@ -50,7 +50,7 @@ class OTPItem: ObservableObject, Identifiable {
     ///  - The counter (only valid on HOTP) is the initial sync counter (required)
 
     /// Generic UUID for unique identification in CoreData
-    let id = UUID()
+    var id = UUID()
     
     /// The type is either HOTP or TOTP. We default to TOTP since it is the most common
     var type: OTPType = OTPType.TOTP
@@ -60,18 +60,19 @@ class OTPItem: ObservableObject, Identifiable {
     
     /// The issuer is a string indicating the provider or service the key is associated with. It is URL-encoded.
     /// If this parameter is not available, the issuer can be taken from the prefix on the label.
-    @Published var issuer: String
+    var issuer: String
     
     /// The algorithm to use when hashing in HMAC. SHA1 is the most common.
     var algorithm: OTPAlgorithm = OTPAlgorithm.SHA1
     
     /// The number of digits to present to the user for OTP, defaults to 6.
-    @Published var digits: Int = 6
+    var digits: Int = 6
     
     /// The TOTP sync period in seconds. This is the amount of time the code is valid for. Only valid when type is TOTP
     var period: Int = 30
     
     /// Only if using HOTP, the user has to enter an initial counter number to sync with the server.
+    /// We can also overload this value for TOTP, using it to indicate when the next value will appear
     var counter: Int = 0
     
     /// We can use this variable as an easy way to keep the current OTP, just cycle through the list and update this
@@ -106,6 +107,7 @@ class OTPItem: ObservableObject, Identifiable {
     
     func generateCode() -> String {
         if self.type == OTPType.TOTP {
+            self.counter = self.period - Int(Int(NSDate().timeIntervalSince1970) % self.period)
             return generateHOTP(intervalCounter: Int(Int(NSDate().timeIntervalSince1970) / self.period))
         }
         let c = self.counter

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3825E90429528B0500E2F921 /* Base32 in Frameworks */ = {isa = PBXBuildFile; productRef = 3825E90329528B0500E2F921 /* Base32 */; };
+		3825E9062954D2D400E2F921 /* OTPStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3825E9052954D2D400E2F921 /* OTPStore.swift */; };
+		3825E9092954D6B800E2F921 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 3825E9082954D6B800E2F921 /* KeychainAccess */; };
 		38904770294FFD1700900EBC /* SesameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3890476F294FFD1700900EBC /* SesameApp.swift */; };
 		38904772294FFD1700900EBC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38904771294FFD1700900EBC /* ContentView.swift */; };
 		38904774294FFD1800900EBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38904773294FFD1800900EBC /* Assets.xcassets */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3825E9052954D2D400E2F921 /* OTPStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPStore.swift; sourceTree = "<group>"; };
+		3825E90A2954DE7C00E2F921 /* SesameDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SesameDebug.entitlements; sourceTree = "<group>"; };
 		3890476C294FFD1700900EBC /* Sesame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sesame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3890476F294FFD1700900EBC /* SesameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SesameApp.swift; sourceTree = "<group>"; };
 		38904771294FFD1700900EBC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,6 +66,7 @@
 			files = (
 				3825E90429528B0500E2F921 /* Base32 in Frameworks */,
 				38A3478429523BBB00603086 /* CodeScanner in Frameworks */,
+				3825E9092954D6B800E2F921 /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +111,7 @@
 		3890476E294FFD1700900EBC /* Sesame */ = {
 			isa = PBXGroup;
 			children = (
+				3825E90A2954DE7C00E2F921 /* SesameDebug.entitlements */,
 				3890476F294FFD1700900EBC /* SesameApp.swift */,
 				38904771294FFD1700900EBC /* ContentView.swift */,
 				38904773294FFD1800900EBC /* Assets.xcassets */,
@@ -114,6 +120,7 @@
 				3890477A294FFD1800900EBC /* Sesame.xcdatamodeld */,
 				38904775294FFD1800900EBC /* Preview Content */,
 				38A3477D2950DFBA00603086 /* OTPModel.swift */,
+				3825E9052954D2D400E2F921 /* OTPStore.swift */,
 			);
 			path = Sesame;
 			sourceTree = "<group>";
@@ -169,6 +176,7 @@
 			packageProductDependencies = (
 				38A3478329523BBB00603086 /* CodeScanner */,
 				3825E90329528B0500E2F921 /* Base32 */,
+				3825E9082954D6B800E2F921 /* KeychainAccess */,
 			);
 			productName = Sesame;
 			productReference = 3890476C294FFD1700900EBC /* Sesame.app */;
@@ -245,6 +253,7 @@
 			packageReferences = (
 				38A3477F2952220A00603086 /* XCRemoteSwiftPackageReference "CodeScanner" */,
 				3825E90229528B0500E2F921 /* XCRemoteSwiftPackageReference "Base32" */,
+				3825E9072954D6B800E2F921 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 			);
 			productRefGroup = 3890476D294FFD1700900EBC /* Products */;
 			projectDirPath = "";
@@ -289,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38904779294FFD1800900EBC /* Persistence.swift in Sources */,
+				3825E9062954D2D400E2F921 /* OTPStore.swift in Sources */,
 				3890477C294FFD1800900EBC /* Sesame.xcdatamodeld in Sources */,
 				38904772294FFD1700900EBC /* ContentView.swift in Sources */,
 				38A3477E2950DFBA00603086 /* OTPModel.swift in Sources */,
@@ -448,6 +458,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Sesame/SesameDebug.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -639,6 +650,14 @@
 				minimumVersion = 0.9.0;
 			};
 		};
+		3825E9072954D6B800E2F921 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
+			requirement = {
+				kind = revision;
+				revision = 6299daec1d74be12164fec090faf9ed14d0da9d6;
+			};
+		};
 		38A3477F2952220A00603086 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/twostraws/CodeScanner";
@@ -654,6 +673,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3825E90229528B0500E2F921 /* XCRemoteSwiftPackageReference "Base32" */;
 			productName = Base32;
+		};
+		3825E9082954D6B800E2F921 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3825E9072954D6B800E2F921 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
 		};
 		38A3478329523BBB00603086 /* CodeScanner */ = {
 			isa = XCSwiftPackageProductDependency;

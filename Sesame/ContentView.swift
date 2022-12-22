@@ -23,7 +23,8 @@ struct ContentView: View {
     @State private var showingAdd = false
     
     @State var otpList: [OTPItem] = [
-        try! OTPItem("otpauth://totp/ACME%20Co:john@example.com?secret=HXDMVJECJJWSRB3HWIZR4IFUGFTMXBOZ&issuer=ACME%20Co&algorithm=SHA1&digits=6&period=30")
+        try! OTPItem("otpauth://totp/ACME%20Co:john@example.com?secret=HXDMVJECJJWSRB3HWIZR4IFUGFTMXBOZ&issuer=ACME%20Co&algorithm=SHA1&digits=6&period=30"),
+        try! OTPItem("otpauth://hotp/ACME%20Co:john@example.com?secret=HXDMVJECJJWSRB3HWIZR4IFUGFTMXBOZ&issuer=ACME%20Co&algorithm=SHA1&digits=6&period=30")
     ]
     
     var body: some View {
@@ -80,18 +81,44 @@ struct ContentView: View {
 struct TOTPRowView: View {
     var TOTPItem: OTPItem
     var body: some View {
-        VStack{
-            Text(TOTPItem.currentValue)
-                .font(.title)
-            HStack{
-                Text(TOTPItem.issuer)
-                    .font(.subheadline)
-                Spacer()
-                Text(TOTPItem.type.description)
+        TimelineView(.periodic(from: .now, by: 1)) { ctx in
+            if TOTPItem.type == OTPType.TOTP || TOTPItem.counter == 0 {
+                let _ = TOTPItem.setCode()
             }
-            
+            HStack {
+                VStack(alignment: .leading){
+                    HStack{
+                        Text(TOTPItem.currentValue)
+                            .font(.title)
+                        Spacer()
+                    }
+                    HStack(){
+                        Text(TOTPItem.issuer)
+                            .font(.subheadline)
+                    }
+                }
+                Spacer()
+                if TOTPItem.type == OTPType.TOTP {
+                    let prog = CGFloat(TOTPItem.counter)/CGFloat(TOTPItem.period)
+                    ZStack{
+                        Circle()
+                            .trim(from: 0, to: prog)
+                            .stroke(Color.orange, lineWidth: 3)
+                            .animation(.spring(), value: prog)
+                            .frame(minWidth: 16, maxWidth: 64, minHeight: 16, maxHeight: 64)
+                            .overlay(
+                                Text(String(TOTPItem.counter))
+                                    .font(.subheadline)
+                                    .rotationEffect(.degrees(90))
+                            )
+                        Spacer()
+                    }
+                    .rotationEffect(.degrees(-90))
+                } else {
+                    Text("Current Counter: \(TOTPItem.counter)")
+                }
+            }
         }
-        
     }
 }
 
