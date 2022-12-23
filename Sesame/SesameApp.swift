@@ -9,12 +9,28 @@ import SwiftUI
 
 @main
 struct SesameApp: App {
-    let persistenceController = PersistenceController.shared
+    @StateObject private var store = OTPStore()
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            NavigationView {
+                ContentView(otpList: $store.OTPs) {
+                    OTPStore.save(otps: store.OTPs) { result in
+                        if case .failure(let failure) = result {
+                            fatalError(failure.localizedDescription)
+                        }
+                    }
+                }
+            }.onAppear {
+                OTPStore.load { result in
+                    switch result {
+                    case .success(let otps):
+                        store.OTPs = otps
+                    case .failure(let error):
+                        fatalError(error.localizedDescription)
+                    }
+                }
+            }
         }
     }
 }

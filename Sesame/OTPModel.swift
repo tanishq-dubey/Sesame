@@ -10,6 +10,12 @@ import Base32
 import CryptoKit
 import CommonCrypto
 
+extension String {
+    func separated(by separator: String = " ", stride: Int = 4) -> String {
+        return enumerated().map { $0.isMultiple(of: stride) && ($0 != 0) ? "\(separator)\($1)" : String($1) }.joined()
+    }
+}
+
 enum OTPAlgorithm: Codable {
     case SHA1
     case SHA256
@@ -33,7 +39,17 @@ enum OTPError: Codable, Error {
     case malformedInput
 }
 
-class OTPItem: Identifiable, Codable {
+class OTPItem: Identifiable, Codable, Equatable {
+    static func == (lhs: OTPItem, rhs: OTPItem) -> Bool {
+        return (lhs.secret == rhs.secret) &&
+        (lhs.issuer == rhs.issuer) &&
+        (lhs.algorithm == rhs.algorithm) &&
+        (lhs.type == rhs.type) &&
+        (lhs.digits == rhs.digits) &&
+        (lhs.period == rhs.period) &&
+        (lhs.counter == rhs.counter)
+    }
+    
     /// A OTPItem represents a single OTP (TOTP or HOTP) key.
     /// This item is generated via QR code or URL in the following format:
     
@@ -79,7 +95,7 @@ class OTPItem: Identifiable, Codable {
     var currentValue: String = ""
 
     private func generateHOTP(intervalCounter: Int) -> String {
-        let key = Base32.base32Decode(self.secret.uppercased() + String(repeating: "=", count: ((8 - self.secret.count) % 8)))
+        let key = Base32.base32Decode(self.secret.uppercased() + String(repeating: "=", count: abs(((8 - self.secret.count) % 8))))
         let counter = UInt64(intervalCounter)
         var packedCounter = Data(count: MemoryLayout<UInt64>.size)
         packedCounter.withUnsafeMutableBytes { (bytes: UnsafeMutablePointer<UInt64>) -> Void in
@@ -116,7 +132,7 @@ class OTPItem: Identifiable, Codable {
     }
     
     func setCode() {
-        self.currentValue = generateCode()
+        self.currentValue = generateCode().separated(by: " ", stride: 3)
     }
     
     init(type: OTPType, secret: String, issuer: String, algorithm: OTPAlgorithm, digits: Int, period: Int, counter: Int) {
@@ -162,12 +178,13 @@ class OTPItem: Identifiable, Codable {
             $0.name == "issuer"
         }).first
         if rawIssuer == nil {
-            // No issuer has be found in the URL, we should euse the label
+            // No issuer has be found in the URL, we should use the label
             // TODO: Add proper parsing here, for testing, we are going to leave it as is
-            self.issuer = rawLabel!
+            self.issuer = rawLabel!.replacingOccurrences(of: "/", with: "")
         } else {
             // Issuer does exist, we can use it as is
-            self.issuer = rawIssuer!.value!
+            let label = rawLabel!.replacingOccurrences(of: "/", with: "")
+            self.issuer = (rawIssuer!.value ?? "Label Not found") + " (\(label))"
         }
         
         let rawAlgorithm = components?.queryItems?.filter({
@@ -189,5 +206,18 @@ class OTPItem: Identifiable, Codable {
                 }
             }
         }
+        
+        if let rawDigits = components?.queryItems?.filter({
+            $0.name == "digits"
+        }).first {
+            self.digits = Int(rawDigits.value ?? "6") ?? 6
+        }
+        
+        if let rawPeriod = components?.queryItems?.filter({
+            $0.name == "period"
+        }).first {
+            self.period = Int(rawPeriod.value ?? "30") ?? 30
+        }
+        
     }
 }

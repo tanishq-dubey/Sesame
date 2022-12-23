@@ -10,12 +10,11 @@
 		3825E90429528B0500E2F921 /* Base32 in Frameworks */ = {isa = PBXBuildFile; productRef = 3825E90329528B0500E2F921 /* Base32 */; };
 		3825E9062954D2D400E2F921 /* OTPStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3825E9052954D2D400E2F921 /* OTPStore.swift */; };
 		3825E9092954D6B800E2F921 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 3825E9082954D6B800E2F921 /* KeychainAccess */; };
+		3825E90D2956119E00E2F921 /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 3825E90C2956119E00E2F921 /* AlertToast */; };
 		38904770294FFD1700900EBC /* SesameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3890476F294FFD1700900EBC /* SesameApp.swift */; };
 		38904772294FFD1700900EBC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38904771294FFD1700900EBC /* ContentView.swift */; };
 		38904774294FFD1800900EBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38904773294FFD1800900EBC /* Assets.xcassets */; };
 		38904777294FFD1800900EBC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38904776294FFD1800900EBC /* Preview Assets.xcassets */; };
-		38904779294FFD1800900EBC /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38904778294FFD1800900EBC /* Persistence.swift */; };
-		3890477C294FFD1800900EBC /* Sesame.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3890477A294FFD1800900EBC /* Sesame.xcdatamodeld */; };
 		38904787294FFD1800900EBC /* SesameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38904786294FFD1800900EBC /* SesameTests.swift */; };
 		38904791294FFD1800900EBC /* SesameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38904790294FFD1800900EBC /* SesameUITests.swift */; };
 		38904793294FFD1800900EBC /* SesameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38904792294FFD1800900EBC /* SesameUITestsLaunchTests.swift */; };
@@ -48,8 +47,6 @@
 		38904771294FFD1700900EBC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		38904773294FFD1800900EBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38904776294FFD1800900EBC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		38904778294FFD1800900EBC /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		3890477B294FFD1800900EBC /* Sesame.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Sesame.xcdatamodel; sourceTree = "<group>"; };
 		3890477D294FFD1800900EBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38904782294FFD1800900EBC /* SesameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SesameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38904786294FFD1800900EBC /* SesameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SesameTests.swift; sourceTree = "<group>"; };
@@ -65,6 +62,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3825E90429528B0500E2F921 /* Base32 in Frameworks */,
+				3825E90D2956119E00E2F921 /* AlertToast in Frameworks */,
 				38A3478429523BBB00603086 /* CodeScanner in Frameworks */,
 				3825E9092954D6B800E2F921 /* KeychainAccess in Frameworks */,
 			);
@@ -115,9 +113,7 @@
 				3890476F294FFD1700900EBC /* SesameApp.swift */,
 				38904771294FFD1700900EBC /* ContentView.swift */,
 				38904773294FFD1800900EBC /* Assets.xcassets */,
-				38904778294FFD1800900EBC /* Persistence.swift */,
 				3890477D294FFD1800900EBC /* Info.plist */,
-				3890477A294FFD1800900EBC /* Sesame.xcdatamodeld */,
 				38904775294FFD1800900EBC /* Preview Content */,
 				38A3477D2950DFBA00603086 /* OTPModel.swift */,
 				3825E9052954D2D400E2F921 /* OTPStore.swift */,
@@ -177,6 +173,7 @@
 				38A3478329523BBB00603086 /* CodeScanner */,
 				3825E90329528B0500E2F921 /* Base32 */,
 				3825E9082954D6B800E2F921 /* KeychainAccess */,
+				3825E90C2956119E00E2F921 /* AlertToast */,
 			);
 			productName = Sesame;
 			productReference = 3890476C294FFD1700900EBC /* Sesame.app */;
@@ -254,6 +251,7 @@
 				38A3477F2952220A00603086 /* XCRemoteSwiftPackageReference "CodeScanner" */,
 				3825E90229528B0500E2F921 /* XCRemoteSwiftPackageReference "Base32" */,
 				3825E9072954D6B800E2F921 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+				3825E90B2956119E00E2F921 /* XCRemoteSwiftPackageReference "AlertToast" */,
 			);
 			productRefGroup = 3890476D294FFD1700900EBC /* Products */;
 			projectDirPath = "";
@@ -297,9 +295,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38904779294FFD1800900EBC /* Persistence.swift in Sources */,
 				3825E9062954D2D400E2F921 /* OTPStore.swift in Sources */,
-				3890477C294FFD1800900EBC /* Sesame.xcdatamodeld in Sources */,
 				38904772294FFD1700900EBC /* ContentView.swift in Sources */,
 				38A3477E2950DFBA00603086 /* OTPModel.swift in Sources */,
 				38904770294FFD1700900EBC /* SesameApp.swift in Sources */,
@@ -658,6 +654,14 @@
 				revision = 6299daec1d74be12164fec090faf9ed14d0da9d6;
 			};
 		};
+		3825E90B2956119E00E2F921 /* XCRemoteSwiftPackageReference "AlertToast" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/elai950/AlertToast#-usage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		38A3477F2952220A00603086 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/twostraws/CodeScanner";
@@ -679,25 +683,17 @@
 			package = 3825E9072954D6B800E2F921 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
 			productName = KeychainAccess;
 		};
+		3825E90C2956119E00E2F921 /* AlertToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3825E90B2956119E00E2F921 /* XCRemoteSwiftPackageReference "AlertToast" */;
+			productName = AlertToast;
+		};
 		38A3478329523BBB00603086 /* CodeScanner */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 38A3477F2952220A00603086 /* XCRemoteSwiftPackageReference "CodeScanner" */;
 			productName = CodeScanner;
 		};
 /* End XCSwiftPackageProductDependency section */
-
-/* Begin XCVersionGroup section */
-		3890477A294FFD1800900EBC /* Sesame.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				3890477B294FFD1800900EBC /* Sesame.xcdatamodel */,
-			);
-			currentVersion = 3890477B294FFD1800900EBC /* Sesame.xcdatamodel */;
-			path = Sesame.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 38904764294FFD1700900EBC /* Project object */;
 }

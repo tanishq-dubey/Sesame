@@ -9,47 +9,52 @@ import SwiftUI
 import CoreData
 import CodeScanner
 
-struct AddSheetView: View {
-    @Environment(\.dismiss) var dismiss
-    
-    var body: some View {
-        Button("dismiss") {
-            dismiss()
-        }
-    }
-}
+//struct AddSheetView: View {
+//    @Environment(\.dismiss) var dismiss
+//
+//    var body: some View {
+//        Button("dismiss") {
+//            dismiss()
+//        }
+//    }
+//}
 
 struct ContentView: View {
     @State private var showingAdd = false
-    
-    @State var otpList: [OTPItem] = [
-        try! OTPItem("otpauth://totp/ACME%20Co:john@example.com?secret=HXDMVJECJJWSRB3HWIZR4IFUGFTMXBOZ&issuer=ACME%20Co&algorithm=SHA1&digits=6&period=30"),
-        try! OTPItem("otpauth://hotp/ACME%20Co:john@example.com?secret=HXDMVJECJJWSRB3HWIZR4IFUGFTMXBOZ&issuer=ACME%20Co&algorithm=SHA1&digits=6&period=30")
-    ]
+    @Binding var otpList: [OTPItem]
+    @Environment(\.scenePhase) private var scenePhase
+    let saveAction: ()->Void
     
     var body: some View {
         NavigationStack{
-            TOTPList(otpList: $otpList)
+            OTPListView(otpList: $otpList)
                 .navigationTitle("Sesame")
                 .toolbar{
-                    ToolbarItem(placement: .navigationBarLeading) {
-                        Button("Edit") {
-                            print("hello")
-                        }
-                    }
                     ToolbarItem(placement: .navigationBarTrailing) {
-                        Button("Add New") {
+                        Button(action: {
                             showingAdd = true
+                        }){
+                            Image(systemName: "plus")
                         }
                     }
                 }
                 .sheet(isPresented: $showingAdd) {
                     VStack{
                         CodeScannerView(codeTypes: [.qr], simulatedData: "otpauth://hotp/DWS%20LLC.:admin@dws.rip?secret=SESAMETEST&algorithm=SHA1&digits=6&period=30", completion: handleScan)
-                        Text("testing")
+                        Button("Cancel") {
+                            showingAdd = false
+                        }.padding(.vertical)
                     }
+                    .padding(.bottom)
                     
                 }
+        }
+        .onChange(of: scenePhase) { phase in
+            if phase == .inactive {
+                saveAction()
+            }
+        }.onChange(of: otpList) { _ in
+            saveAction()
         }
     }
     
@@ -75,31 +80,33 @@ struct ContentView: View {
             print(error.localizedDescription)
         }
     }
-    
 }
 
-struct TOTPRowView: View {
-    var TOTPItem: OTPItem
+struct OTPRowView: View {
+    @Binding var otpList: [OTPItem]
+    @State private var showCopyToast = false
+    
+    var otpItem: OTPItem
     var body: some View {
         TimelineView(.periodic(from: .now, by: 1)) { ctx in
-            if TOTPItem.type == OTPType.TOTP || TOTPItem.counter == 0 {
-                let _ = TOTPItem.setCode()
+            if otpItem.type == OTPType.TOTP || otpItem.counter == 0 {
+                let _ = otpItem.setCode()
             }
             HStack {
                 VStack(alignment: .leading){
                     HStack{
-                        Text(TOTPItem.currentValue)
+                        Text(otpItem.currentValue)
                             .font(.title)
                         Spacer()
                     }
                     HStack(){
-                        Text(TOTPItem.issuer)
+                        Text(otpItem.issuer)
                             .font(.subheadline)
                     }
                 }
                 Spacer()
-                if TOTPItem.type == OTPType.TOTP {
-                    let prog = CGFloat(TOTPItem.counter)/CGFloat(TOTPItem.period)
+                if otpItem.type == OTPType.TOTP {
+                    let prog = CGFloat(otpItem.counter)/CGFloat(otpItem.period)
                     ZStack{
                         Circle()
                             .trim(from: 0, to: prog)
@@ -107,7 +114,7 @@ struct TOTPRowView: View {
                             .animation(.spring(), value: prog)
                             .frame(minWidth: 16, maxWidth: 64, minHeight: 16, maxHeight: 64)
                             .overlay(
-                                Text(String(TOTPItem.counter))
+                                Text(String(otpItem.counter))
                                     .font(.subheadline)
                                     .rotationEffect(.degrees(90))
                             )
@@ -115,24 +122,36 @@ struct TOTPRowView: View {
                     }
                     .rotationEffect(.degrees(-90))
                 } else {
-                    Text("Current Counter: \(TOTPItem.counter)")
+                    Text("Current Counter: \(otpItem.counter)")
                 }
             }
+        }.swipeActions(allowsFullSwipe: false) {
+            Button(role: .destructive) {
+                otpList.removeAll(where: {
+                    $0.id == otpItem.id
+                })
+            } label: {
+                Label("Delete", systemImage: "trash.fill")
+            }
+            Button(role: .none) {
+                
+            } label: {
+                Label("Edit", systemImage: "pencil.circle.fill")
+            }
+        }.onTapGesture {
+            let pasteboard = UIPasteboard.general
+            pasteboard.string = otpItem.currentValue.replacingOccurrences(of: " ", with: "")
+            showCopyToast.toggle()
         }
     }
 }
 
-struct TOTPList: View {
+struct OTPListView: View {
     @Binding var otpList: [OTPItem]
+    
     var body: some View {
         List(otpList) { otp in
-            TOTPRowView(TOTPItem: otp)
+            OTPRowView(otpList: $otpList, otpItem: otp)
         }
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
