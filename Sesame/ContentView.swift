@@ -9,16 +9,6 @@ import SwiftUI
 import CoreData
 import CodeScanner
 
-//struct AddSheetView: View {
-//    @Environment(\.dismiss) var dismiss
-//
-//    var body: some View {
-//        Button("dismiss") {
-//            dismiss()
-//        }
-//    }
-//}
-
 struct ContentView: View {
     @State private var showingAdd = false
     @Binding var otpList: [OTPItem]
@@ -28,7 +18,7 @@ struct ContentView: View {
     var body: some View {
         NavigationStack{
             OTPListView(otpList: $otpList)
-                .navigationTitle("Sesame")
+                .navigationTitle("Keys")
                 .toolbar{
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button(action: {
@@ -84,45 +74,73 @@ struct ContentView: View {
 
 struct OTPRowView: View {
     @Binding var otpList: [OTPItem]
-    @State private var showCopyToast = false
+    @Binding var otpItem: OTPItem
+    @Binding var otpcolor: Color
     
-    var otpItem: OTPItem
+    @State private var showCopyToast = false
+    @State private var isDetailActive = false
+    
     var body: some View {
-        TimelineView(.periodic(from: .now, by: 1)) { ctx in
-            if otpItem.type == OTPType.TOTP || otpItem.counter == 0 {
-                let _ = otpItem.setCode()
-            }
-            HStack {
-                VStack(alignment: .leading){
-                    HStack{
-                        Text(otpItem.currentValue)
-                            .font(.title)
-                        Spacer()
-                    }
-                    HStack(){
-                        Text(otpItem.issuer)
-                            .font(.subheadline)
-                    }
+        NavigationLink(destination: OTPDetailView(otpItem: $otpItem, otpColor: $otpcolor), isActive: $isDetailActive){
+            TimelineView(.periodic(from: .now, by: 1)) { ctx in
+                if otpItem.type == OTPType.TOTP || otpItem.currentValue == "" {
+                    let _ = otpItem.setCode()
                 }
-                Spacer()
-                if otpItem.type == OTPType.TOTP {
-                    let prog = CGFloat(otpItem.counter)/CGFloat(otpItem.period)
-                    ZStack{
-                        Circle()
-                            .trim(from: 0, to: prog)
-                            .stroke(Color.orange, lineWidth: 3)
-                            .animation(.spring(), value: prog)
-                            .frame(minWidth: 16, maxWidth: 64, minHeight: 16, maxHeight: 64)
-                            .overlay(
-                                Text(String(otpItem.counter))
-                                    .font(.subheadline)
-                                    .rotationEffect(.degrees(90))
-                            )
-                        Spacer()
+                HStack {
+                    VStack(alignment: .leading){
+                        HStack{
+                            Text(otpItem.currentValue)
+                                .font(.title)
+                            Spacer()
+                        }
+                        HStack(){
+                            Text(otpItem.issuer)
+                                .font(.subheadline)
+                                .lineLimit(1)
+                        }
+                    }.gesture(TapGesture(count: 2).onEnded {
+                        otpItem.counter += 1
+                        otpItem.setCode()
+                        let pasteboard = UIPasteboard.general
+                        pasteboard.string = otpItem.currentValue.replacingOccurrences(of: " ", with: "")
+                    })
+                    .simultaneousGesture(TapGesture().onEnded {
+                        let pasteboard = UIPasteboard.general
+                        pasteboard.string = otpItem.currentValue.replacingOccurrences(of: " ", with: "")
+                    })
+                    Spacer()
+                    if otpItem.type == OTPType.TOTP {
+                        let prog = CGFloat(otpItem.counter)/CGFloat(otpItem.period)
+                        ZStack{
+                            Circle()
+                                .trim(from: 0, to: prog)
+                                .stroke(otpItem.otpColor, lineWidth: 3)
+                                .animation(.spring(), value: prog)
+                                .frame(minWidth: 16, maxWidth: 64, minHeight: 16, maxHeight: 64)
+                                .overlay(
+                                    Text(String(otpItem.counter))
+                                        .font(.footnote)
+                                        .rotationEffect(.degrees(90))
+                                )
+                            Spacer()
+                        }
+                        .rotationEffect(.degrees(-90))
+                    } else {
+                        ZStack{
+                            Circle()
+                                .stroke(otpItem.otpColor, lineWidth: 3)
+                                .frame(minWidth: 16, maxWidth: 64, minHeight: 16, maxHeight: 64)
+                                .blur(radius: 4)
+                                .overlay(
+                                    Text(String(otpItem.counter))
+                                        .font(.footnote)
+                                        .multilineTextAlignment(.center)
+                                        .rotationEffect(.degrees(90))
+                                )
+                            Spacer()
+                        }
+                        .rotationEffect(.degrees(-90))
                     }
-                    .rotationEffect(.degrees(-90))
-                } else {
-                    Text("Current Counter: \(otpItem.counter)")
                 }
             }
         }.swipeActions(allowsFullSwipe: false) {
@@ -133,15 +151,6 @@ struct OTPRowView: View {
             } label: {
                 Label("Delete", systemImage: "trash.fill")
             }
-            Button(role: .none) {
-                
-            } label: {
-                Label("Edit", systemImage: "pencil.circle.fill")
-            }
-        }.onTapGesture {
-            let pasteboard = UIPasteboard.general
-            pasteboard.string = otpItem.currentValue.replacingOccurrences(of: " ", with: "")
-            showCopyToast.toggle()
         }
     }
 }
@@ -150,8 +159,22 @@ struct OTPListView: View {
     @Binding var otpList: [OTPItem]
     
     var body: some View {
-        List(otpList) { otp in
-            OTPRowView(otpList: $otpList, otpItem: otp)
+        List($otpList) { otp in
+            OTPRowView(otpList: $otpList, otpItem: otp, otpcolor: otp.otpColor)
         }
+    }
+}
+
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView(otpList: .constant([
+            try! OTPItem("otpauth://totp/admin@dws.rip?secret=JBSWY3DPEHPK3PXP&issuer=AWS&algorithm=SHA1&digits=6&period=30"),
+            try! OTPItem("otpauth://totp/admin@dws.rip?secret=JBSWY3DPEHPK3PXQ&issuer=AWS256&algorithm=SHA256&digits=6&period=30"),
+            try! OTPItem("otpauth://totp/admin@dws.rip?secret=JBSWY3DPEHPK3PXR&issuer=AWS512&algorithm=SHA512&digits=6&period=30"),
+            try! OTPItem("otpauth://totp/admin@dws.rip?secret=JBSWY3DPEHPK3PXS&issuer=AWS512&algorithm=SHA512&digits=6&period=45"),
+            try! OTPItem("otpauth://hotp/admin@dws.rip?secret=JBSWY3DPEHPK3PXS&issuer=AWS512&algorithm=SHA512&digits=6&period=45&counter=1"),
+            try! OTPItem("otpauth://hotp/admin@dws.rip?secret=JBSWY3DPEHPK3PXS&issuer=AWS512&algorithm=SHA512&digits=6&period=45&counter=10"),
+        ]), saveAction: {})
     }
 }

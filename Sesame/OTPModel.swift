@@ -8,7 +8,7 @@
 import Foundation
 import Base32
 import CryptoKit
-import CommonCrypto
+import SwiftUI
 
 extension String {
     func separated(by separator: String = " ", stride: Int = 4) -> String {
@@ -16,10 +16,93 @@ extension String {
     }
 }
 
+extension Color {
+    static var random: Color {
+        return Color(red: .random(in: 0...1),
+                     green: .random(in: 0...1),
+                     blue: .random(in: 0...1))
+    }
+}
+
+#if os(iOS)
+import UIKit
+#elseif os(watchOS)
+import WatchKit
+#elseif os(macOS)
+import AppKit
+#endif
+
+fileprivate extension Color {
+    #if os(macOS)
+    typealias SystemColor = NSColor
+    #else
+    typealias SystemColor = UIColor
+    #endif
+    
+    var colorComponents: (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat)? {
+        var r: CGFloat = 0
+        var g: CGFloat = 0
+        var b: CGFloat = 0
+        var a: CGFloat = 0
+        
+        #if os(macOS)
+        SystemColor(self).getRed(&r, green: &g, blue: &b, alpha: &a)
+        // Note that non RGB color will raise an exception, that I don't now how to catch because it is an Objc exception.
+        #else
+        guard SystemColor(self).getRed(&r, green: &g, blue: &b, alpha: &a) else {
+            // Pay attention that the color should be convertible into RGB format
+            // Colors using hue, saturation and brightness won't work
+            return nil
+        }
+        #endif
+        
+        return (r, g, b, a)
+    }
+}
+
+extension Color: Codable {
+    enum CodingKeys: String, CodingKey {
+        case red, green, blue
+    }
+    
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        let r = try container.decode(Double.self, forKey: .red)
+        let g = try container.decode(Double.self, forKey: .green)
+        let b = try container.decode(Double.self, forKey: .blue)
+        
+        self.init(red: r, green: g, blue: b)
+    }
+
+    public func encode(to encoder: Encoder) throws {
+        guard let colorComponents = self.colorComponents else {
+            return
+        }
+        
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        
+        try container.encode(colorComponents.red, forKey: .red)
+        try container.encode(colorComponents.green, forKey: .green)
+        try container.encode(colorComponents.blue, forKey: .blue)
+    }
+}
+
 enum OTPAlgorithm: Codable {
     case SHA1
     case SHA256
     case SHA512
+    
+    var description : String {
+        switch self {
+            
+        case .SHA1:
+            return "SHA-1"
+        case .SHA256:
+            return "SHA-256"
+        case .SHA512:
+            return "SHA-512"
+        }
+    }
 }
 
 enum OTPType: Codable, CustomStringConvertible {
@@ -93,6 +176,9 @@ class OTPItem: Identifiable, Codable, Equatable {
     
     /// We can use this variable as an easy way to keep the current OTP, just cycle through the list and update this
     var currentValue: String = ""
+    
+    /// Color of the countdown
+    var otpColor: Color = Color(red: Double.random(in: 0.0 ..< 1.0), green: Double.random(in: 0.0 ..< 1.0), blue: Double.random(in: 0.0 ..< 1.0))
 
     private func generateHOTP(intervalCounter: Int) -> String {
         let key = Base32.base32Decode(self.secret.uppercased() + String(repeating: "=", count: abs(((8 - self.secret.count) % 8))))
@@ -217,6 +303,12 @@ class OTPItem: Identifiable, Codable, Equatable {
             $0.name == "period"
         }).first {
             self.period = Int(rawPeriod.value ?? "30") ?? 30
+        }
+        
+        if let rawCounter = components?.queryItems?.filter({
+            $0.name == "counter"
+        }).first {
+            self.counter = Int(rawCounter.value ?? "0") ?? 0
         }
         
     }

@@ -11,6 +11,8 @@
 		3825E9062954D2D400E2F921 /* OTPStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3825E9052954D2D400E2F921 /* OTPStore.swift */; };
 		3825E9092954D6B800E2F921 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 3825E9082954D6B800E2F921 /* KeychainAccess */; };
 		3825E90D2956119E00E2F921 /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 3825E90C2956119E00E2F921 /* AlertToast */; };
+		3825E90F295616B300E2F921 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3825E90E295616B300E2F921 /* SettingsView.swift */; };
+		3825E91129565A0500E2F921 /* OTPDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3825E91029565A0500E2F921 /* OTPDetailView.swift */; };
 		38904770294FFD1700900EBC /* SesameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3890476F294FFD1700900EBC /* SesameApp.swift */; };
 		38904772294FFD1700900EBC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38904771294FFD1700900EBC /* ContentView.swift */; };
 		38904774294FFD1800900EBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38904773294FFD1800900EBC /* Assets.xcassets */; };
@@ -42,6 +44,8 @@
 /* Begin PBXFileReference section */
 		3825E9052954D2D400E2F921 /* OTPStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPStore.swift; sourceTree = "<group>"; };
 		3825E90A2954DE7C00E2F921 /* SesameDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SesameDebug.entitlements; sourceTree = "<group>"; };
+		3825E90E295616B300E2F921 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		3825E91029565A0500E2F921 /* OTPDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPDetailView.swift; sourceTree = "<group>"; };
 		3890476C294FFD1700900EBC /* Sesame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sesame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3890476F294FFD1700900EBC /* SesameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SesameApp.swift; sourceTree = "<group>"; };
 		38904771294FFD1700900EBC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -117,6 +121,8 @@
 				38904775294FFD1800900EBC /* Preview Content */,
 				38A3477D2950DFBA00603086 /* OTPModel.swift */,
 				3825E9052954D2D400E2F921 /* OTPStore.swift */,
+				3825E90E295616B300E2F921 /* SettingsView.swift */,
+				3825E91029565A0500E2F921 /* OTPDetailView.swift */,
 			);
 			path = Sesame;
 			sourceTree = "<group>";
@@ -295,8 +301,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3825E90F295616B300E2F921 /* SettingsView.swift in Sources */,
 				3825E9062954D2D400E2F921 /* OTPStore.swift in Sources */,
 				38904772294FFD1700900EBC /* ContentView.swift in Sources */,
+				3825E91129565A0500E2F921 /* OTPDetailView.swift in Sources */,
 				38A3477E2950DFBA00603086 /* OTPModel.swift in Sources */,
 				38904770294FFD1700900EBC /* SesameApp.swift in Sources */,
 			);
@@ -468,7 +476,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -503,7 +511,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
