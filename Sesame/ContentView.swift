@@ -76,12 +76,15 @@ struct OTPRowView: View {
     @Binding var otpList: [OTPItem]
     @Binding var otpItem: OTPItem
     @Binding var otpcolor: Color
+    @Binding var otpLabel: String
     
     @State private var showCopyToast = false
     @State private var isDetailActive = false
     
     var body: some View {
-        NavigationLink(destination: OTPDetailView(otpItem: $otpItem, otpColor: $otpcolor), isActive: $isDetailActive){
+        NavigationLink {
+            OTPDetailView(otpItem: $otpItem, otpColor: $otpcolor, otpLabel: $otpLabel)
+        } label: {
             TimelineView(.periodic(from: .now, by: 1)) { ctx in
                 if otpItem.type == OTPType.TOTP || otpItem.currentValue == "" {
                     let _ = otpItem.setCode()
@@ -102,6 +105,7 @@ struct OTPRowView: View {
                         let pasteboard = UIPasteboard.general
                         pasteboard.string = otpItem.currentValue.replacingOccurrences(of: " ", with: "")
                     }.onLongPressGesture {
+                        otpItem.counter += 1
                         otpItem.setCode()
                         let pasteboard = UIPasteboard.general
                         pasteboard.string = otpItem.currentValue.replacingOccurrences(of: " ", with: "")
@@ -146,6 +150,7 @@ struct OTPRowView: View {
                 otpList.removeAll(where: {
                     $0.id == otpItem.id
                 })
+                
             } label: {
                 Label("Delete", systemImage: "trash.fill")
             }
@@ -158,7 +163,7 @@ struct OTPListView: View {
     
     var body: some View {
         List($otpList) { otp in
-            OTPRowView(otpList: $otpList, otpItem: otp, otpcolor: otp.otpColor)
+            OTPRowView(otpList: $otpList, otpItem: otp, otpcolor: otp.otpColor, otpLabel: otp.issuer)
         }
     }
 }
@@ -167,13 +172,13 @@ struct OTPListView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView(otpList: .constant([
-            try! OTPItem("otpauth://totp/admin@dws.rip?secret=JBSWY3DPEHPK3PXP&issuer=AWS&algorithm=SHA1&digits=6&period=30"),
-            try! OTPItem("otpauth://totp/admin@dws.rip?secret=JBSWY3DPEHPK3PXQ&issuer=AWS256&algorithm=SHA256&digits=6&period=30"),
+            try! OTPItem("otpauth://totp/admin@dws.rip?secret=JBSWY3DPEHPK3PXP&issuer=AWS&algorithm=SHA1&period=30"),
+            try! OTPItem("otpauth://totp/admin@dws.rip?secret=JBSWY3DPEHPK3PXQ&issuer=AWS256&algorithm=SHA256&digits=8&period=30"),
             try! OTPItem("otpauth://totp/admin@dws.rip?secret=JBSWY3DPEHPK3PXR&issuer=AWS512&algorithm=SHA512&digits=6&period=30"),
             try! OTPItem("otpauth://totp/admin@dws.rip?secret=JBSWY3DPEHPK3PXS&issuer=AWS512&algorithm=SHA512&digits=6&period=45"),
             try! OTPItem("otpauth://hotp/admin@dws.rip?secret=JBSWY3DPEHPK3PXT&issuer=AWS512&digits=6&period=45"),
             try! OTPItem("otpauth://hotp/admin@dws.rip?secret=JBSWY3DPEHPK3PXU&issuer=AWS256&algorithm=SHA256&digits=6&period=45&counter=1"),
-            try! OTPItem("otpauth://hotp/admin@dws.rip?secret=JBSWY3DPEHPK3PXV&issuer=AWS512&algorithm=SHA512&digits=6&period=45&counter=10"),
+            try! OTPItem("otpauth://hotp/admin@dws.rip?secret=JBSWY3DPEHPK3PXV&issuer=AWS512&algorithm=SHA512&digits=8&period=45&counter=10"),
         ]), saveAction: {})
     }
 }
