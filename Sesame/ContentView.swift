@@ -77,13 +77,14 @@ struct OTPRowView: View {
     @Binding var otpItem: OTPItem
     @Binding var otpcolor: Color
     @Binding var otpLabel: String
+    @Binding var otpCounter: Int
     
     @State private var showCopyToast = false
     @State private var isDetailActive = false
     
     var body: some View {
         NavigationLink {
-            OTPDetailView(otpItem: $otpItem, otpColor: $otpcolor, otpLabel: $otpLabel)
+            OTPDetailView(otpItem: $otpItem, otpColor: $otpcolor, otpLabel: $otpLabel, otpCounter: $otpCounter)
         } label: {
             TimelineView(.periodic(from: .now, by: 1)) { ctx in
                 if otpItem.type == OTPType.TOTP || otpItem.currentValue == "" {
@@ -163,7 +164,7 @@ struct OTPListView: View {
     
     var body: some View {
         List($otpList) { otp in
-            OTPRowView(otpList: $otpList, otpItem: otp, otpcolor: otp.otpColor, otpLabel: otp.issuer)
+            OTPRowView(otpList: $otpList, otpItem: otp, otpcolor: otp.otpColor, otpLabel: otp.issuer, otpCounter: otp.counter)
         }
     }
 }

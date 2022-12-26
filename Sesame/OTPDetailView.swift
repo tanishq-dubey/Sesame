@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 struct SecureInputView: View {
     
@@ -42,6 +43,7 @@ struct OTPDetailView: View {
     @Binding var otpItem: OTPItem
     @Binding var otpColor: Color
     @Binding var otpLabel: String
+    @Binding var otpCounter: Int
     
     var body: some View {
         List {
@@ -89,19 +91,26 @@ struct OTPDetailView: View {
                     Text("Issuer")
                     Spacer()
                     TextField("Issuer", text: $otpLabel)
-                        .foregroundColor(Color.gray)
                         .multilineTextAlignment(.trailing)
                 }
                 if otpItem.type == OTPType.HOTP {
                     HStack {
-                        Text("Counter")
-                        Spacer()
-                        Text("\(otpItem.counter)")
-                            .foregroundColor(Color.gray)
-                            .multilineTextAlignment(.trailing)
+                        Text("Counter Value")
+                        TextField("Counter", value: $otpCounter, formatter: NumberFormatter())
+                            .keyboardType(.numberPad).onChange(of: otpCounter) { _ in
+                                otpItem.setCode()
+                            }
+                        Stepper("Counter", value: $otpCounter, in: 0...Int.max, step: 1).onChange(of: otpCounter) { _ in
+                            otpItem.setCode()
+                        }
+                        .labelsHidden()
+                        
+                        
+                        
+                            
                     }
                 }
-                ColorPicker("Counter Color", selection: $otpColor, supportsOpacity: false)
+                ColorPicker("Color", selection: $otpColor, supportsOpacity: false)
             }
         }
         .navigationTitle("Key Details")
@@ -110,6 +119,6 @@ struct OTPDetailView: View {
 
 struct OTPDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        OTPDetailView(otpItem: .constant(try! OTPItem("otpauth://hotp/DWS%20LLC.:admin@dws.rip?secret=JBSWY3DPEHPK3PXP&issuer=DWS%20LLC.&algorithm=SHA1&digits=6&period=30")), otpColor: .constant(Color.random), otpLabel: .constant("TestLabel"))
+        OTPDetailView(otpItem: .constant(try! OTPItem("otpauth://hotp/DWS%20LLC.:admin@dws.rip?secret=JBSWY3DPEHPK3PXP&issuer=DWS%20LLC.&algorithm=SHA1&digits=6&period=30")), otpColor: .constant(Color.random), otpLabel: .constant("TestLabel"), otpCounter: .constant(1))
     }
 }
