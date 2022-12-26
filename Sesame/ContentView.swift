@@ -98,16 +98,14 @@ struct OTPRowView: View {
                                 .font(.subheadline)
                                 .lineLimit(1)
                         }
-                    }.gesture(TapGesture(count: 2).onEnded {
-                        otpItem.counter += 1
+                    }.onTapGesture {
+                        let pasteboard = UIPasteboard.general
+                        pasteboard.string = otpItem.currentValue.replacingOccurrences(of: " ", with: "")
+                    }.onLongPressGesture {
                         otpItem.setCode()
                         let pasteboard = UIPasteboard.general
                         pasteboard.string = otpItem.currentValue.replacingOccurrences(of: " ", with: "")
-                    })
-                    .simultaneousGesture(TapGesture().onEnded {
-                        let pasteboard = UIPasteboard.general
-                        pasteboard.string = otpItem.currentValue.replacingOccurrences(of: " ", with: "")
-                    })
+                    }
                     Spacer()
                     if otpItem.type == OTPType.TOTP {
                         let prog = CGFloat(otpItem.counter)/CGFloat(otpItem.period)

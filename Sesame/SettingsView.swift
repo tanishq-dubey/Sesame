@@ -91,7 +91,7 @@ struct SettingsView: View {
         }.alert(isPresented: $showingHelp) {
             Alert(
                 title: Text("Using Sesame"),
-                message: Text("Tap on a OTP code to copy it to the clipboard.\n\nDouble tap on a HOTP code to increment the counter.\n\nTapping on the countdown will show you details about the OTP Key. You can also edit key details from here.")
+                message: Text("Tap on a OTP code to copy it to the clipboard.\n\nLong tap on a HOTP code to increment the counter and copy it to the clipboard.\n\nTapping on the countdown will show you details about the OTP Key. You can also edit key details from here.")
             )
         }
     }
