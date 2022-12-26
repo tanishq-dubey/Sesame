@@ -201,7 +201,9 @@ class OTPItem: Identifiable, Codable, Equatable {
         }
         
         let offset = Int(mac[mac.count - 1]) & 0x0f
-        let binary = UInt32(bigEndian: mac[offset..<offset+4].withUnsafeBytes { $0.pointee }) & 0x7fffffff
+        let binary = mac[offset..<offset+4].withUnsafeBytes { (ptr: UnsafeRawBufferPointer) -> UInt32 in
+            ptr.bindMemory(to: UInt32.self).first!
+        } & 0x7fffffff
         var bString = String(binary)
         if bString.count < self.digits {
             bString = bString.padding(toLength: self.digits, withPad: "0", startingAt: 0)
