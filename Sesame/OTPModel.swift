@@ -184,9 +184,11 @@ class OTPItem: Identifiable, Codable, Equatable {
         let key = Base32.base32Decode(self.secret.uppercased() + String(repeating: "=", count: abs(((8 - self.secret.count) % 8))))
         let counter = UInt64(intervalCounter)
         var packedCounter = Data(count: MemoryLayout<UInt64>.size)
-        packedCounter.withUnsafeMutableBytes { (bytes: UnsafeMutablePointer<UInt64>) -> Void in
-            bytes.pointee = counter.bigEndian
+
+        packedCounter.withUnsafeMutableBytes { bytes in
+            bytes.storeBytes(of: counter.bigEndian, as: UInt64.self)
         }
+        
         
         var mac = Data(HMAC<Insecure.SHA1>.authenticationCode(for: packedCounter, using: SymmetricKey(data: key!)))
         switch self.algorithm {
@@ -212,9 +214,7 @@ class OTPItem: Identifiable, Codable, Equatable {
             self.counter = self.period - Int(Int(NSDate().timeIntervalSince1970) % self.period)
             return generateHOTP(intervalCounter: Int(Int(NSDate().timeIntervalSince1970) / self.period))
         }
-        let c = self.counter
-        self.counter += 1
-        return generateHOTP(intervalCounter: c)
+        return generateHOTP(intervalCounter: self.counter)
     }
     
     func setCode() {
@@ -234,8 +234,14 @@ class OTPItem: Identifiable, Codable, Equatable {
     /// Initialize a OTP object from a OTP URL. This intitalizer can throw exceptions if the URL is malformed
     init(_ fromURL: String) throws {
         let url = URL(string: fromURL)
+        if url == nil {
+            throw OTPError.parsingError(reason: "Could not parse OTP URL")
+        }
         
         let rawType = url?.host()
+        if rawType == nil {
+            throw OTPError.parsingError(reason: "Could not parse OTP type")
+        }
         switch rawType?.lowercased() {
         case "totp":
             self.type = OTPType.TOTP
@@ -246,6 +252,12 @@ class OTPItem: Identifiable, Codable, Equatable {
         }
         
         let components = URLComponents(url: url!, resolvingAgainstBaseURL: false)
+        if components == nil {
+            throw OTPError.parsingError(reason: "Could not parse OTP URL components")
+        }
+        if components?.queryItems == nil || components?.queryItems?.count ?? 0 < 1 {
+            throw OTPError.parsingError(reason: "Could not parse OTP URL components")
+        }
         
         let rawSecret = components?.queryItems?.filter({
             $0.name == "secret"
@@ -266,11 +278,18 @@ class OTPItem: Identifiable, Codable, Equatable {
         if rawIssuer == nil {
             // No issuer has be found in the URL, we should use the label
             // TODO: Add proper parsing here, for testing, we are going to leave it as is
+            if rawLabel == nil {
+                throw OTPError.parsingError(reason: "Could not parse a issuer or a label for the OTP")
+            }
             self.issuer = rawLabel!.replacingOccurrences(of: "/", with: "")
         } else {
             // Issuer does exist, we can use it as is
-            let label = rawLabel!.replacingOccurrences(of: "/", with: "")
-            self.issuer = (rawIssuer!.value ?? "Label Not found") + " (\(label))"
+            if rawLabel == nil {
+                self.issuer = (rawIssuer!.value ?? "Label Not found")
+            } else {
+                let label = rawLabel!.replacingOccurrences(of: "/", with: "")
+                self.issuer = (rawIssuer!.value ?? "Label Not found") + " (\(label))"
+            }
         }
         
         let rawAlgorithm = components?.queryItems?.filter({
