@@ -28,7 +28,6 @@ struct SesameApp: App {
                         case .success(let otps):
                             store.OTPs = otps
                         case .failure(let error):
-                            // store.OTPs = []  // This line should only be uncommented during debugging breaking changes
                             fatalError(error.localizedDescription)
                         }
                     }

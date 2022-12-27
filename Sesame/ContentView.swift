@@ -8,11 +8,17 @@
 import SwiftUI
 import CoreData
 import CodeScanner
+import AlertToast
 
 struct ContentView: View {
     @State private var showingAdd = false
+    @State private var showingAddAlert = false
+    @State private var addError: String = ""
+    
     @Binding var otpList: [OTPItem]
+    
     @Environment(\.scenePhase) private var scenePhase
+    
     let saveAction: ()->Void
     
     var body: some View {
@@ -37,6 +43,11 @@ struct ContentView: View {
                     }
                     .padding(.bottom)
                     
+                }.alert(isPresented: $showingAddAlert) {
+                    Alert(
+                        title: Text("Could not add OTP"),
+                        message: Text(addError)
+                    )
                 }
         }
         .onChange(of: scenePhase) { phase in
@@ -56,18 +67,20 @@ struct ContentView: View {
             print(details)
             do {
                 let item = try OTPItem(details)
-                print(item.generateCode())
                 otpList.append(item)
             } catch OTPError.malformedInput {
-                print("malformed input: \(details)")
+                addError = "The OTP URL is malformed, please double check it: \(details)"
+                showingAddAlert.toggle()
             } catch OTPError.parsingError {
-                print("parsing error: \(details)")
+                addError = "There was an error parsing the OTP details: \(details)"
+                showingAddAlert.toggle()
             } catch {
-                print("who knows what")
+                addError = "An unknown error has happened while adding the OTP code: \(details)"
+                showingAddAlert.toggle()
             }
-            
         case .failure(let error):
-            print(error.localizedDescription)
+            addError = "Could not successfully scan the OTP QR code: \(error.localizedDescription)"
+            showingAddAlert.toggle()
         }
     }
 }
@@ -78,8 +91,8 @@ struct OTPRowView: View {
     @Binding var otpcolor: Color
     @Binding var otpLabel: String
     @Binding var otpCounter: Int
+    @Binding var showCopyToast: Bool
     
-    @State private var showCopyToast = false
     @State private var isDetailActive = false
     
     var body: some View {
@@ -105,11 +118,13 @@ struct OTPRowView: View {
                     }.onTapGesture {
                         let pasteboard = UIPasteboard.general
                         pasteboard.string = otpItem.currentValue.replacingOccurrences(of: " ", with: "")
+                        showCopyToast.toggle()
                     }.onLongPressGesture {
                         otpItem.counter += 1
                         otpItem.setCode()
                         let pasteboard = UIPasteboard.general
                         pasteboard.string = otpItem.currentValue.replacingOccurrences(of: " ", with: "")
+                        showCopyToast.toggle()
                     }
                     Spacer()
                     if otpItem.type == OTPType.TOTP {
@@ -133,7 +148,6 @@ struct OTPRowView: View {
                             Circle()
                                 .stroke(otpItem.otpColor, lineWidth: 3)
                                 .frame(minWidth: 16, maxWidth: 64, minHeight: 16, maxHeight: 64)
-                                .blur(radius: 4)
                                 .overlay(
                                     Text(String(otpItem.counter))
                                         .font(.footnote)
@@ -151,7 +165,6 @@ struct OTPRowView: View {
                 otpList.removeAll(where: {
                     $0.id == otpItem.id
                 })
-                
             } label: {
                 Label("Delete", systemImage: "trash.fill")
             }
@@ -161,10 +174,13 @@ struct OTPRowView: View {
 
 struct OTPListView: View {
     @Binding var otpList: [OTPItem]
+    @State var showCopyToast: Bool = false
     
     var body: some View {
         List($otpList) { otp in
-            OTPRowView(otpList: $otpList, otpItem: otp, otpcolor: otp.otpColor, otpLabel: otp.issuer, otpCounter: otp.counter)
+            OTPRowView(otpList: $otpList, otpItem: otp, otpcolor: otp.otpColor, otpLabel: otp.issuer, otpCounter: otp.counter, showCopyToast: $showCopyToast)
+        }.toast(isPresenting: $showCopyToast){
+            AlertToast(displayMode: .hud, type: .regular, title: "Code copied to clipboard!")
         }
     }
 }

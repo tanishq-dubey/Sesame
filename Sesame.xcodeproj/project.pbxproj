@@ -22,6 +22,7 @@
 		38904793294FFD1800900EBC /* SesameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38904792294FFD1800900EBC /* SesameUITestsLaunchTests.swift */; };
 		38A3477E2950DFBA00603086 /* OTPModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A3477D2950DFBA00603086 /* OTPModel.swift */; };
 		38A3478429523BBB00603086 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 38A3478329523BBB00603086 /* CodeScanner */; };
+		38F9652A295A7A670059A3EB /* BuyMeACoffee in Frameworks */ = {isa = PBXBuildFile; productRef = 38F96529295A7A670059A3EB /* BuyMeACoffee */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 			files = (
 				3825E90429528B0500E2F921 /* Base32 in Frameworks */,
 				3825E90D2956119E00E2F921 /* AlertToast in Frameworks */,
+				38F9652A295A7A670059A3EB /* BuyMeACoffee in Frameworks */,
 				38A3478429523BBB00603086 /* CodeScanner in Frameworks */,
 				3825E9092954D6B800E2F921 /* KeychainAccess in Frameworks */,
 			);
@@ -180,6 +182,7 @@
 				3825E90329528B0500E2F921 /* Base32 */,
 				3825E9082954D6B800E2F921 /* KeychainAccess */,
 				3825E90C2956119E00E2F921 /* AlertToast */,
+				38F96529295A7A670059A3EB /* BuyMeACoffee */,
 			);
 			productName = Sesame;
 			productReference = 3890476C294FFD1700900EBC /* Sesame.app */;
@@ -258,6 +261,7 @@
 				3825E90229528B0500E2F921 /* XCRemoteSwiftPackageReference "Base32" */,
 				3825E9072954D6B800E2F921 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 				3825E90B2956119E00E2F921 /* XCRemoteSwiftPackageReference "AlertToast" */,
+				38F96528295A7A670059A3EB /* XCRemoteSwiftPackageReference "buymeacoffee" */,
 			);
 			productRefGroup = 3890476D294FFD1700900EBC /* Products */;
 			projectDirPath = "";
@@ -678,6 +682,14 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		38F96528295A7A670059A3EB /* XCRemoteSwiftPackageReference "buymeacoffee" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/appcraftstudio/buymeacoffee";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -700,6 +712,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 38A3477F2952220A00603086 /* XCRemoteSwiftPackageReference "CodeScanner" */;
 			productName = CodeScanner;
+		};
+		38F96529295A7A670059A3EB /* BuyMeACoffee */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38F96528295A7A670059A3EB /* XCRemoteSwiftPackageReference "buymeacoffee" */;
+			productName = BuyMeACoffee;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

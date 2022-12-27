@@ -130,7 +130,8 @@ class OTPItem: Identifiable, Codable, Equatable {
         (lhs.type == rhs.type) &&
         (lhs.digits == rhs.digits) &&
         (lhs.period == rhs.period) &&
-        (lhs.counter == rhs.counter)
+        (lhs.counter == rhs.counter) &&
+        (lhs.otpColor == rhs.otpColor)
     }
     
     /// A OTPItem represents a single OTP (TOTP or HOTP) key.
