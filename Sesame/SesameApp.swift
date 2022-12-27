@@ -11,6 +11,9 @@ import SwiftUI
 struct SesameApp: App {
     @StateObject private var store = OTPStore()
     
+    @State private var showingRootAlert: Bool = false
+    @State private var rootAlertMessage: String = ""
+    
     var body: some Scene {
         WindowGroup {
             TabView{
@@ -18,7 +21,8 @@ struct SesameApp: App {
                     ContentView(otpList: $store.OTPs) {
                         OTPStore.save(otps: store.OTPs) { result in
                             if case .failure(let failure) = result {
-                                fatalError(failure.localizedDescription)
+                                rootAlertMessage = "There was an error saving the keys to the keychain: \(failure.localizedDescription)"
+                                showingRootAlert.toggle()
                             }
                         }
                     }
@@ -28,12 +32,14 @@ struct SesameApp: App {
                         case .success(let otps):
                             store.OTPs = otps
                         case .failure(let error):
-                            fatalError(error.localizedDescription)
+                            rootAlertMessage = "There was an error loading the keys from the keychain: \(error.localizedDescription)"
+                            showingRootAlert.toggle()
                         }
                     }
                 }.tabItem{
                     Label("Keys", systemImage: "key")
                 }
+                
                 NavigationView {
                     SettingsView(otpList: $store.OTPs)
                 }
