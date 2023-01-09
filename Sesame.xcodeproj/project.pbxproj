@@ -20,6 +20,7 @@
 		38904787294FFD1800900EBC /* SesameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38904786294FFD1800900EBC /* SesameTests.swift */; };
 		38904791294FFD1800900EBC /* SesameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38904790294FFD1800900EBC /* SesameUITests.swift */; };
 		38904793294FFD1800900EBC /* SesameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38904792294FFD1800900EBC /* SesameUITestsLaunchTests.swift */; };
+		389DCF15296BC7EB0054BD70 /* QRAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389DCF14296BC7EB0054BD70 /* QRAddView.swift */; };
 		38A3477E2950DFBA00603086 /* OTPModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A3477D2950DFBA00603086 /* OTPModel.swift */; };
 		38A3478429523BBB00603086 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 38A3478329523BBB00603086 /* CodeScanner */; };
 		38F9652A295A7A670059A3EB /* BuyMeACoffee in Frameworks */ = {isa = PBXBuildFile; productRef = 38F96529295A7A670059A3EB /* BuyMeACoffee */; };
@@ -58,6 +59,7 @@
 		3890478C294FFD1800900EBC /* SesameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SesameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38904790294FFD1800900EBC /* SesameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SesameUITests.swift; sourceTree = "<group>"; };
 		38904792294FFD1800900EBC /* SesameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SesameUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		389DCF14296BC7EB0054BD70 /* QRAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRAddView.swift; sourceTree = "<group>"; };
 		38A3477D2950DFBA00603086 /* OTPModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,6 +127,7 @@
 				3825E9052954D2D400E2F921 /* OTPStore.swift */,
 				3825E90E295616B300E2F921 /* SettingsView.swift */,
 				3825E91029565A0500E2F921 /* OTPDetailView.swift */,
+				389DCF14296BC7EB0054BD70 /* QRAddView.swift */,
 			);
 			path = Sesame;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 			files = (
 				3825E90F295616B300E2F921 /* SettingsView.swift in Sources */,
 				3825E9062954D2D400E2F921 /* OTPStore.swift in Sources */,
+				389DCF15296BC7EB0054BD70 /* QRAddView.swift in Sources */,
 				38904772294FFD1700900EBC /* ContentView.swift in Sources */,
 				3825E91129565A0500E2F921 /* OTPDetailView.swift in Sources */,
 				38A3477E2950DFBA00603086 /* OTPModel.swift in Sources */,

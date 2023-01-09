@@ -96,11 +96,11 @@ enum OTPAlgorithm: Codable {
         switch self {
             
         case .SHA1:
-            return "SHA-1"
+            return "SHA1"
         case .SHA256:
-            return "SHA-256"
+            return "SHA256"
         case .SHA512:
-            return "SHA-512"
+            return "SHA512"
         }
     }
 }
@@ -224,6 +224,13 @@ class OTPItem: Identifiable, Codable, Equatable {
         self.currentValue = generateCode().separated(by: " ", stride: 3)
     }
     
+    func createURL() -> String {
+        if self.type == OTPType.HOTP {
+            return "otpauth://\(self.type.description.lowercased())/\(self.issuer.addingPercentEncoding(withAllowedCharacters: .alphanumerics)!)?secret=\(self.secret)&issuer=\(self.issuer.addingPercentEncoding(withAllowedCharacters: .alphanumerics)!)&algorithm=\(self.algorithm.description)&digits=\(self.digits)&period=\(self.period)&counter=\(self.counter)"
+        }
+        return "otpauth://\(self.type.description.lowercased())/\(self.issuer.addingPercentEncoding(withAllowedCharacters: .alphanumerics)!)?secret=\(self.secret)&issuer=\(self.issuer.addingPercentEncoding(withAllowedCharacters: .alphanumerics)!)&algorithm=\(self.algorithm.description)&digits=\(self.digits)&period=\(self.period)"
+    }
+    
     init(type: OTPType, secret: String, issuer: String, algorithm: OTPAlgorithm, digits: Int, period: Int, counter: Int) {
         self.type = type
         self.secret = secret
@@ -241,7 +248,7 @@ class OTPItem: Identifiable, Codable, Equatable {
             throw OTPError.parsingError(reason: "Could not parse OTP URL")
         }
         
-        let rawType = url?.host()
+        let rawType = url?.host
         if rawType == nil {
             throw OTPError.parsingError(reason: "Could not parse OTP type")
         }

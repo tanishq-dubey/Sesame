@@ -12,10 +12,11 @@ import AlertToast
 
 struct ContentView: View {
     @State private var showingAdd = false
-    @State private var showingAddAlert = false
+    @State private var showingManualAdd = false
     @State private var addError: String = ""
     
     @Binding var otpList: [OTPItem]
+    @State var showCopyToast: Bool = false
     
     @Environment(\.scenePhase) private var scenePhase
     
@@ -23,32 +24,40 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack{
-            OTPListView(otpList: $otpList)
-                .navigationTitle("Keys")
-                .toolbar{
-                    ToolbarItem(placement: .navigationBarTrailing) {
+            NavigationLink(destination: QRAddView(otpItems: $otpList), isActive: $showingAdd) {}
+            List {
+                ForEach ($otpList) { o in
+                    OTPRowView(otpList: $otpList, otpItem: o, otpcolor: o.otpColor, otpLabel: o.issuer, otpCounter: o.counter, showCopyToast: $showCopyToast)
+                }
+                
+            }
+            .toast(isPresenting: $showCopyToast){
+                AlertToast(displayMode: .hud, type: .regular, title: "Code copied to clipboard!")
+            }
+            .navigationTitle("Keys")
+            .toolbar{
+                ToolbarItem(placement: .navigationBarLeading) {
+                    EditButton()
+                }
+                ToolbarItem(placement: .primaryAction) {
+                    Menu {
                         Button(action: {
-                            showingAdd = true
-                        }){
-                            Image(systemName: "plus")
+                            showingAdd.toggle()
+                        }) {
+                            Label("Add by QR Code", systemImage: "qrcode.viewfinder")
+                        }
+
+                        Button(action: {
+                            
+                        }) {
+                            Label("Add Manually", systemImage: "plus")
                         }
                     }
-                }
-                .sheet(isPresented: $showingAdd) {
-                    VStack{
-                        CodeScannerView(codeTypes: [.qr], simulatedData: "otpauth://hotp/DWS%20LLC.:admin@dws.rip?secret=SESAMETEST&algorithm=SHA1&digits=6&period=30", completion: handleScan)
-                        Button("Cancel") {
-                            showingAdd = false
-                        }.padding(.vertical)
+                    label: {
+                        Label("Add", systemImage: "plus")
                     }
-                    .padding(.bottom)
-                    
-                }.alert(isPresented: $showingAddAlert) {
-                    Alert(
-                        title: Text("Could not add OTP"),
-                        message: Text(addError)
-                    )
                 }
+            }
         }
         .onChange(of: scenePhase) { phase in
             if phase == .inactive {
@@ -56,31 +65,6 @@ struct ContentView: View {
             }
         }.onChange(of: otpList) { _ in
             saveAction()
-        }
-    }
-    
-    func handleScan(result: Result<ScanResult, ScanError>) {
-        showingAdd = false
-        switch result {
-        case .success(let result):
-            let details = result.string
-            print(details)
-            do {
-                let item = try OTPItem(details)
-                otpList.append(item)
-            } catch OTPError.malformedInput {
-                addError = "The OTP URL is malformed, please double check it: \(details)"
-                showingAddAlert.toggle()
-            } catch OTPError.parsingError {
-                addError = "There was an error parsing the OTP details: \(details)"
-                showingAddAlert.toggle()
-            } catch {
-                addError = "An unknown error has happened while adding the OTP code: \(details)"
-                showingAddAlert.toggle()
-            }
-        case .failure(let error):
-            addError = "Could not successfully scan the OTP QR code: \(error.localizedDescription)"
-            showingAddAlert.toggle()
         }
     }
 }
@@ -168,19 +152,6 @@ struct OTPRowView: View {
             } label: {
                 Label("Delete", systemImage: "trash.fill")
             }
-        }
-    }
-}
-
-struct OTPListView: View {
-    @Binding var otpList: [OTPItem]
-    @State var showCopyToast: Bool = false
-    
-    var body: some View {
-        List($otpList) { otp in
-            OTPRowView(otpList: $otpList, otpItem: otp, otpcolor: otp.otpColor, otpLabel: otp.issuer, otpCounter: otp.counter, showCopyToast: $showCopyToast)
-        }.toast(isPresenting: $showCopyToast){
-            AlertToast(displayMode: .hud, type: .regular, title: "Code copied to clipboard!")
         }
     }
 }
