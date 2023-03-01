@@ -28,6 +28,7 @@ struct QRAddView: View {
                 })
             )
         }
+        .navigationBarTitle("Scan A QR Code")
     }
     
     func handleScan(result: Result<ScanResult, ScanError>) {

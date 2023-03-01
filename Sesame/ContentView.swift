@@ -10,6 +10,26 @@ import CoreData
 import CodeScanner
 import AlertToast
 
+struct CustomEditButton: View {
+    @Binding var editMode: EditMode
+    
+    var body: some View {
+      Button {
+        switch editMode {
+        case .active: editMode = .inactive
+        case .inactive: editMode = .active
+        default: break
+        }
+      } label: {
+        if let isEditing = editMode.isEditing, isEditing {
+          Text("Done")
+        } else {
+          Text("Edit")
+        }
+      }
+    }
+}
+
 struct ContentView: View {
     @State private var showingAdd = false
     @State private var showingManualAdd = false
@@ -19,17 +39,19 @@ struct ContentView: View {
     @State var showCopyToast: Bool = false
     
     @Environment(\.scenePhase) private var scenePhase
+    @State private var editMode = EditMode.inactive
     
     let saveAction: ()->Void
     
     var body: some View {
         NavigationStack{
             NavigationLink(destination: QRAddView(otpItems: $otpList), isActive: $showingAdd) {}
+            NavigationLink(destination: OTPManualAddView(otpList: $otpList), isActive: $showingManualAdd) {}
             List {
                 ForEach ($otpList) { o in
                     OTPRowView(otpList: $otpList, otpItem: o, otpcolor: o.otpColor, otpLabel: o.issuer, otpCounter: o.counter, showCopyToast: $showCopyToast)
                 }
-                
+                .onDelete { otpList.remove(atOffsets: $0) }
             }
             .toast(isPresenting: $showCopyToast){
                 AlertToast(displayMode: .hud, type: .regular, title: "Code copied to clipboard!")
@@ -48,7 +70,7 @@ struct ContentView: View {
                         }
 
                         Button(action: {
-                            
+                            showingManualAdd.toggle()
                         }) {
                             Label("Add Manually", systemImage: "plus")
                         }
@@ -58,6 +80,7 @@ struct ContentView: View {
                     }
                 }
             }
+            .environment(\.editMode, $editMode)
         }
         .onChange(of: scenePhase) { phase in
             if phase == .inactive {
@@ -66,6 +89,10 @@ struct ContentView: View {
         }.onChange(of: otpList) { _ in
             saveAction()
         }
+    }
+    
+    func relocate(from source: IndexSet, to destination: Int) {
+        otpList.move(fromOffsets: source, toOffset: destination)
     }
 }
 
@@ -160,7 +187,7 @@ struct OTPRowView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView(otpList: .constant([
-            try! OTPItem("otpauth://totp/admin@dws.rip?secret=JBSWY3DPEHPK3PXP&issuer=AWS&algorithm=SHA1&period=30"),
+            try! OTPItem("otpauth://totp/admin@dws.rip?secret=JBSWY3DPEHPK3PXP&issuer=Email%20(Work)&algorithm=SHA1&period=30"),
             try! OTPItem("otpauth://totp/admin@dws.rip?secret=JBSWY3DPEHPK3PXQ&issuer=AWS256&algorithm=SHA256&digits=8&period=30"),
             try! OTPItem("otpauth://totp/admin@dws.rip?secret=JBSWY3DPEHPK3PXR&issuer=AWS512&algorithm=SHA512&digits=6&period=30"),
             try! OTPItem("otpauth://totp/admin@dws.rip?secret=JBSWY3DPEHPK3PXS&issuer=AWS512&algorithm=SHA512&digits=6&period=45"),

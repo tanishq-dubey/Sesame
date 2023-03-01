@@ -104,10 +104,6 @@ struct OTPDetailView: View {
                             otpItem.setCode()
                         }
                         .labelsHidden()
-                        
-                        
-                        
-                            
                     }
                 }
                 ColorPicker("Color", selection: $otpColor, supportsOpacity: false)

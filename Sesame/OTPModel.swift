@@ -24,6 +24,16 @@ extension Color {
     }
 }
 
+public extension Data {
+    private static let hexAlphabet = Array("0123456789abcdef".unicodeScalars)
+    func hexStringEncoded() -> String {
+        String(reduce(into: "".unicodeScalars) { result, value in
+            result.append(Self.hexAlphabet[Int(value / 0x10)])
+            result.append(Self.hexAlphabet[Int(value % 0x10)])
+        })
+    }
+}
+
 #if os(iOS)
 import UIKit
 #elseif os(watchOS)
@@ -182,15 +192,34 @@ class OTPItem: Identifiable, Codable, Equatable {
     var otpColor: Color = Color(red: Double.random(in: 0.0 ..< 1.0), green: Double.random(in: 0.0 ..< 1.0), blue: Double.random(in: 0.0 ..< 1.0))
 
     private func generateHOTP(intervalCounter: Int) -> String {
-        let key = Base32.base32Decode(self.secret.uppercased() + String(repeating: "=", count: abs(((8 - self.secret.count) % 8))))
+        var padding: String = ""
+        switch self.secret.count {
+        case 2:
+            padding = "======"
+        case 4:
+            padding = "===="
+        case 5:
+            padding = "==="
+        case 7:
+            padding = "=="
+        default:
+            padding = ""
+        }
+//        print("Key: \(self.secret)")
+//        print("Counter: \(intervalCounter)")
+        let key = Base32.base32Decode(self.secret.uppercased() + padding)
         let counter = UInt64(intervalCounter)
         var packedCounter = Data(count: MemoryLayout<UInt64>.size)
+//        print("Key: \(String(describing: key))")
 
         packedCounter.withUnsafeMutableBytes { bytes in
             bytes.storeBytes(of: counter.bigEndian, as: UInt64.self)
         }
+//        print("Counter: \(packedCounter.hexStringEncoded())")
         
-        
+        if key == nil {
+            return "XXX XXX"
+        }
         var mac = Data(HMAC<Insecure.SHA1>.authenticationCode(for: packedCounter, using: SymmetricKey(data: key!)))
         switch self.algorithm {
         case .SHA1:
@@ -200,15 +229,20 @@ class OTPItem: Identifiable, Codable, Equatable {
         case .SHA512:
             mac = Data(HMAC<SHA512>.authenticationCode(for: packedCounter, using: SymmetricKey(data: key!)))
         }
+//        print("Mac: \(mac.hexStringEncoded())")
+        
         
         let offset = Int(mac[mac.count - 1]) & 0x0f
-        let binary = mac[offset..<offset+4].withUnsafeBytes { (ptr: UnsafeRawBufferPointer) -> UInt32 in
-            ptr.bindMemory(to: UInt32.self).first!
-        } & 0x7fffffff
+//        print("Offset: \(offset)")
+
+        let binary = UInt32(bigEndian: Data(mac[offset..<offset+4]).withUnsafeBytes { $0.load(as: UInt32.self) }) & 0x7fffffff
+
         var bString = String(binary)
+//        print("Binary: \(bString), \(binary)")
         if bString.count < self.digits {
             bString = bString.padding(toLength: self.digits, withPad: "0", startingAt: 0)
         }
+//        print()
         return String(bString.suffix(self.digits))
     }
     
@@ -231,7 +265,7 @@ class OTPItem: Identifiable, Codable, Equatable {
         return "otpauth://\(self.type.description.lowercased())/\(self.issuer.addingPercentEncoding(withAllowedCharacters: .alphanumerics)!)?secret=\(self.secret)&issuer=\(self.issuer.addingPercentEncoding(withAllowedCharacters: .alphanumerics)!)&algorithm=\(self.algorithm.description)&digits=\(self.digits)&period=\(self.period)"
     }
     
-    init(type: OTPType, secret: String, issuer: String, algorithm: OTPAlgorithm, digits: Int, period: Int, counter: Int) {
+    init(type: OTPType, secret: String, issuer: String, algorithm: OTPAlgorithm, digits: Int, period: Int, counter: Int, color: Color) {
         self.type = type
         self.secret = secret
         self.issuer = issuer
@@ -239,6 +273,7 @@ class OTPItem: Identifiable, Codable, Equatable {
         self.digits = digits
         self.period = period
         self.counter = counter
+        self.otpColor = color
     }
     
     /// Initialize a OTP object from a OTP URL. This intitalizer can throw exceptions if the URL is malformed
