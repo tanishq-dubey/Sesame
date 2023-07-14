@@ -21,7 +21,7 @@ struct CustomEditButton: View {
         default: break
         }
       } label: {
-        if let isEditing = editMode.isEditing, isEditing {
+        if editMode.isEditing {
           Text("Done")
         } else {
           Text("Edit")
@@ -34,32 +34,65 @@ struct ContentView: View {
     @State private var showingAdd = false
     @State private var showingManualAdd = false
     @State private var addError: String = ""
-    
-    @Binding var otpList: [OTPItem]
+    @State private var confirmationShown = false
+    @State private var itemToDelete: OTPItem? = nil
     @State var showCopyToast: Bool = false
-    
-    @Environment(\.scenePhase) private var scenePhase
     @State private var editMode = EditMode.inactive
     
+    @Binding var otpList: [OTPItem]
+    
+    @Environment(\.scenePhase) private var scenePhase
+    
+    var isEditing: Bool {
+        $editMode.wrappedValue.isEditing == true
+    }
+
     let saveAction: ()->Void
+    
     
     var body: some View {
         NavigationStack{
-            NavigationLink(destination: QRAddView(otpItems: $otpList), isActive: $showingAdd) {}
-            NavigationLink(destination: OTPManualAddView(otpList: $otpList), isActive: $showingManualAdd) {}
             List {
                 ForEach ($otpList) { o in
-                    OTPRowView(otpList: $otpList, otpItem: o, otpcolor: o.otpColor, otpLabel: o.issuer, otpCounter: o.counter, showCopyToast: $showCopyToast)
+                    let _ = isEditing
+                    OTPRowView(otpItem: o, otpcolor: o.otpColor, otpLabel: o.issuer, otpCounter: o.counter, showCopyToast: $showCopyToast)
+                    .swipeActions {
+                        Button(
+                            action: {
+                                self.itemToDelete = o.wrappedValue
+                                confirmationShown = true
+                            }
+                        ) {
+                            Image(systemName: "trash")
+                        }
+                        .tint(.red)
+                    }
+                    .confirmationDialog(
+                        "Are you sure you want to delete this key? You cannot undo this action.",
+                        isPresented: $confirmationShown,
+                        titleVisibility: .visible
+                    ) {
+                        Button(
+                            "Delete",
+                            role: .destructive
+                        ) {
+                            withAnimation {
+                                deleteItem(self.itemToDelete)
+                            }
+                        }
+                    }
                 }
-                .onDelete { otpList.remove(atOffsets: $0) }
+                .onDelete(perform: deleteRow)
+                .onMove(perform: isEditing ? relocate : nil)
             }
-            .toast(isPresenting: $showCopyToast){
-                AlertToast(displayMode: .hud, type: .regular, title: "Code copied to clipboard!")
-            }
+            
             .navigationTitle("Keys")
             .toolbar{
                 ToolbarItem(placement: .navigationBarLeading) {
                     EditButton()
+                        .simultaneousGesture(TapGesture().onEnded {
+                            saveAction()
+                        })
                 }
                 ToolbarItem(placement: .primaryAction) {
                     Menu {
@@ -80,8 +113,18 @@ struct ContentView: View {
                     }
                 }
             }
+            .toast(isPresenting: $showCopyToast){
+                AlertToast(displayMode: .alert, type: .regular, title: "Code copied to clipboard!")
+            }
             .environment(\.editMode, $editMode)
+            .navigationDestination(isPresented: $showingAdd) {
+                QRAddView(otpItems: $otpList)
+            }
+            .navigationDestination(isPresented: $showingManualAdd) {
+                OTPManualAddView(otpList: $otpList)
+            }
         }
+        
         .onChange(of: scenePhase) { phase in
             if phase == .inactive {
                 saveAction()
@@ -89,15 +132,38 @@ struct ContentView: View {
         }.onChange(of: otpList) { _ in
             saveAction()
         }
+        
+                                
     }
     
     func relocate(from source: IndexSet, to destination: Int) {
         otpList.move(fromOffsets: source, toOffset: destination)
     }
+    
+    func deleteItem(_ item: OTPItem?) {
+        guard let item else { return }
+        
+        var index = -1
+        for i in 0...(otpList.count - 1) {
+            print(i)
+            if (otpList[i].id == item.id) {
+                index = i
+                break
+            }
+        }
+        if (index == -1) {
+            return
+        }
+        otpList.remove(at: index)
+    }
+    
+    func deleteRow(at indexSet: IndexSet) {
+        self.itemToDelete = nil
+        confirmationShown = true
+    }
 }
 
 struct OTPRowView: View {
-    @Binding var otpList: [OTPItem]
     @Binding var otpItem: OTPItem
     @Binding var otpcolor: Color
     @Binding var otpLabel: String
@@ -105,6 +171,7 @@ struct OTPRowView: View {
     @Binding var showCopyToast: Bool
     
     @State private var isDetailActive = false
+    @State private var showingDeleteAlert = false
     
     var body: some View {
         NavigationLink {
@@ -170,14 +237,6 @@ struct OTPRowView: View {
                         .rotationEffect(.degrees(-90))
                     }
                 }
-            }
-        }.swipeActions(allowsFullSwipe: false) {
-            Button(role: .destructive) {
-                otpList.removeAll(where: {
-                    $0.id == otpItem.id
-                })
-            } label: {
-                Label("Delete", systemImage: "trash.fill")
             }
         }
     }

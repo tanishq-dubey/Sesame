@@ -1,0 +1,85 @@
+{
+  "pins" : [
+    {
+      "identity" : "alerttoast#-usage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/elai950/AlertToast#-usage",
+      "state" : {
+        "revision" : "a4f4267f6454259ba4ed8f9dadb87334a789c26c",
+        "version" : "1.3.7"
+      }
+    },
+    {
+      "identity" : "base32",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/norio-nomura/Base32",
+      "state" : {
+        "revision" : "c4bc0a49689999ae2c7c778f3830a6a6e694efb8",
+        "version" : "0.9.0"
+      }
+    },
+    {
+      "identity" : "buymeacoffee",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/appcraftstudio/buymeacoffee",
+      "state" : {
+        "revision" : "20c574ac7dc0112fa66fdcd31e696543ccbb9047",
+        "version" : "1.0.6"
+      }
+    },
+    {
+      "identity" : "codescanner",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/twostraws/CodeScanner",
+      "state" : {
+        "revision" : "c7859712034a08bb5a018fbe8751c1f1edc4b248",
+        "version" : "2.2.1"
+      }
+    },
+    {
+      "identity" : "gauthswiftparser",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/svyatoynick/GAuthSwiftParser.git",
+      "state" : {
+        "revision" : "c987174e2ddb0854e1ced2e6c8250fe3e7c7c51a",
+        "version" : "1.0.3"
+      }
+    },
+    {
+      "identity" : "keychainaccess",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kishikawakatsumi/KeychainAccess",
+      "state" : {
+        "revision" : "6299daec1d74be12164fec090faf9ed14d0da9d6"
+      }
+    },
+    {
+      "identity" : "swift-crypto",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-crypto.git",
+      "state" : {
+        "revision" : "ddb07e896a2a8af79512543b1c7eb9797f8898a5",
+        "version" : "1.1.7"
+      }
+    },
+    {
+      "identity" : "swift-protobuf",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-protobuf.git",
+      "state" : {
+        "revision" : "ab3a58b7209a17d781c0d1dbb3e1ff3da306bae8",
+        "version" : "1.20.3"
+      }
+    },
+    {
+      "identity" : "swiftotp",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/lachlanbell/SwiftOTP.git",
+      "state" : {
+        "revision" : "e43757cd3851b77ca7da195b3355c4a6f2991a0e",
+        "version" : "3.0.1"
+      }
+    }
+  ],
+  "version" : 2
+}

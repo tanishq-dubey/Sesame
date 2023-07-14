@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "OTPItem.generateHOTP(intervalCounter:):OTPModel.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #2 in OTPItem.generateHOTP(intervalCounter:):OTPModel.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "offset">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

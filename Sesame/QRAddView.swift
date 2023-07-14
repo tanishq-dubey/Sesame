@@ -7,6 +7,7 @@
 
 import SwiftUI
 import CodeScanner
+import GAuthSwiftParser
 
 struct QRAddView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
@@ -36,8 +37,16 @@ struct QRAddView: View {
         case .success(let result):
             let details = result.string
             do {
-                let item = try OTPItem(details)
-                otpItems.append(item)
+                if details.starts(with: "otpauth-migration") {
+                    let data = GAuthSwiftParser.getAccounts(code: details)
+                    for otp in data {
+                        let item = try OTPItem(otp.getLink())
+                        otpItems.append(item)
+                    }
+                } else {
+                    let item = try OTPItem(details)
+                    otpItems.append(item)
+                }
                 self.presentationMode.wrappedValue.dismiss()
             } catch OTPError.malformedInput {
                 showingAdd.toggle()

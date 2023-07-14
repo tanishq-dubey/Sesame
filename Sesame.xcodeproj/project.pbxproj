@@ -13,6 +13,7 @@
 		3825E90D2956119E00E2F921 /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 3825E90C2956119E00E2F921 /* AlertToast */; };
 		3825E90F295616B300E2F921 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3825E90E295616B300E2F921 /* SettingsView.swift */; };
 		3825E91129565A0500E2F921 /* OTPDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3825E91029565A0500E2F921 /* OTPDetailView.swift */; };
+		3877E5F52A59D49F00C8E94B /* GAuthSwiftParser in Frameworks */ = {isa = PBXBuildFile; productRef = 3877E5F42A59D49F00C8E94B /* GAuthSwiftParser */; };
 		38904770294FFD1700900EBC /* SesameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3890476F294FFD1700900EBC /* SesameApp.swift */; };
 		38904772294FFD1700900EBC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38904771294FFD1700900EBC /* ContentView.swift */; };
 		38904774294FFD1800900EBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38904773294FFD1800900EBC /* Assets.xcassets */; };
@@ -73,6 +74,7 @@
 				3825E90429528B0500E2F921 /* Base32 in Frameworks */,
 				3825E90D2956119E00E2F921 /* AlertToast in Frameworks */,
 				38F9652A295A7A670059A3EB /* BuyMeACoffee in Frameworks */,
+				3877E5F52A59D49F00C8E94B /* GAuthSwiftParser in Frameworks */,
 				38A3478429523BBB00603086 /* CodeScanner in Frameworks */,
 				3825E9092954D6B800E2F921 /* KeychainAccess in Frameworks */,
 			);
@@ -189,6 +191,7 @@
 				3825E9082954D6B800E2F921 /* KeychainAccess */,
 				3825E90C2956119E00E2F921 /* AlertToast */,
 				38F96529295A7A670059A3EB /* BuyMeACoffee */,
+				3877E5F42A59D49F00C8E94B /* GAuthSwiftParser */,
 			);
 			productName = Sesame;
 			productReference = 3890476C294FFD1700900EBC /* Sesame.app */;
@@ -268,6 +271,7 @@
 				3825E9072954D6B800E2F921 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 				3825E90B2956119E00E2F921 /* XCRemoteSwiftPackageReference "AlertToast" */,
 				38F96528295A7A670059A3EB /* XCRemoteSwiftPackageReference "buymeacoffee" */,
+				3877E5F32A59D49F00C8E94B /* XCRemoteSwiftPackageReference "GAuthSwiftParser" */,
 			);
 			productRefGroup = 3890476D294FFD1700900EBC /* Products */;
 			projectDirPath = "";
@@ -477,7 +481,7 @@
 				CODE_SIGN_ENTITLEMENTS = Sesame/SesameDebug.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Sesame/Preview Content\"";
 				DEVELOPMENT_TEAM = P3FJ87836G;
 				ENABLE_PREVIEWS = YES;
@@ -496,7 +500,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dws.tanishqdubey.Sesame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -512,7 +516,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Sesame/Preview Content\"";
 				DEVELOPMENT_TEAM = P3FJ87836G;
 				ENABLE_PREVIEWS = YES;
@@ -531,7 +535,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dws.Sesame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -682,6 +686,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		3877E5F32A59D49F00C8E94B /* XCRemoteSwiftPackageReference "GAuthSwiftParser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/svyatoynick/GAuthSwiftParser.git";
+			requirement = {
+				kind = exactVersion;
+				version = 1.0.3;
+			};
+		};
 		38A3477F2952220A00603086 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/twostraws/CodeScanner";
@@ -715,6 +727,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3825E90B2956119E00E2F921 /* XCRemoteSwiftPackageReference "AlertToast" */;
 			productName = AlertToast;
+		};
+		3877E5F42A59D49F00C8E94B /* GAuthSwiftParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3877E5F32A59D49F00C8E94B /* XCRemoteSwiftPackageReference "GAuthSwiftParser" */;
+			productName = GAuthSwiftParser;
 		};
 		38A3478329523BBB00603086 /* CodeScanner */ = {
 			isa = XCSwiftPackageProductDependency;
