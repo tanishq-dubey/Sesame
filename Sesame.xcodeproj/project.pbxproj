@@ -21,11 +21,11 @@
 		38904787294FFD1800900EBC /* SesameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38904786294FFD1800900EBC /* SesameTests.swift */; };
 		38904791294FFD1800900EBC /* SesameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38904790294FFD1800900EBC /* SesameUITests.swift */; };
 		38904793294FFD1800900EBC /* SesameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38904792294FFD1800900EBC /* SesameUITestsLaunchTests.swift */; };
+		3899BF242A60F94400411031 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3899BF232A60F94400411031 /* ScannerViewController.swift */; };
+		3899BF262A60F97800411031 /* CodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3899BF252A60F97800411031 /* CodeScanner.swift */; };
 		389DCF15296BC7EB0054BD70 /* QRAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389DCF14296BC7EB0054BD70 /* QRAddView.swift */; };
 		389DCF17296BCFC10054BD70 /* OTPManualAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389DCF16296BCFC10054BD70 /* OTPManualAddView.swift */; };
 		38A3477E2950DFBA00603086 /* OTPModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A3477D2950DFBA00603086 /* OTPModel.swift */; };
-		38A3478429523BBB00603086 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 38A3478329523BBB00603086 /* CodeScanner */; };
-		38F9652A295A7A670059A3EB /* BuyMeACoffee in Frameworks */ = {isa = PBXBuildFile; productRef = 38F96529295A7A670059A3EB /* BuyMeACoffee */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +61,8 @@
 		3890478C294FFD1800900EBC /* SesameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SesameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38904790294FFD1800900EBC /* SesameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SesameUITests.swift; sourceTree = "<group>"; };
 		38904792294FFD1800900EBC /* SesameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SesameUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3899BF232A60F94400411031 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
+		3899BF252A60F97800411031 /* CodeScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeScanner.swift; sourceTree = "<group>"; };
 		389DCF14296BC7EB0054BD70 /* QRAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRAddView.swift; sourceTree = "<group>"; };
 		389DCF16296BCFC10054BD70 /* OTPManualAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPManualAddView.swift; sourceTree = "<group>"; };
 		38A3477D2950DFBA00603086 /* OTPModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPModel.swift; sourceTree = "<group>"; };
@@ -73,9 +75,7 @@
 			files = (
 				3825E90429528B0500E2F921 /* Base32 in Frameworks */,
 				3825E90D2956119E00E2F921 /* AlertToast in Frameworks */,
-				38F9652A295A7A670059A3EB /* BuyMeACoffee in Frameworks */,
 				3877E5F52A59D49F00C8E94B /* GAuthSwiftParser in Frameworks */,
-				38A3478429523BBB00603086 /* CodeScanner in Frameworks */,
 				3825E9092954D6B800E2F921 /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -133,6 +133,9 @@
 				3825E91029565A0500E2F921 /* OTPDetailView.swift */,
 				389DCF14296BC7EB0054BD70 /* QRAddView.swift */,
 				389DCF16296BCFC10054BD70 /* OTPManualAddView.swift */,
+				3899BF232A60F94400411031 /* ScannerViewController.swift */,
+				3899BF252A60F97800411031 /* CodeScanner.swift */,
+				3899BF272A60F9B100411031 /* New Group */,
 			);
 			path = Sesame;
 			sourceTree = "<group>";
@@ -162,6 +165,13 @@
 			path = SesameUITests;
 			sourceTree = "<group>";
 		};
+		3899BF272A60F9B100411031 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		38A3478229523BBB00603086 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,11 +196,9 @@
 			);
 			name = Sesame;
 			packageProductDependencies = (
-				38A3478329523BBB00603086 /* CodeScanner */,
 				3825E90329528B0500E2F921 /* Base32 */,
 				3825E9082954D6B800E2F921 /* KeychainAccess */,
 				3825E90C2956119E00E2F921 /* AlertToast */,
-				38F96529295A7A670059A3EB /* BuyMeACoffee */,
 				3877E5F42A59D49F00C8E94B /* GAuthSwiftParser */,
 			);
 			productName = Sesame;
@@ -266,11 +274,9 @@
 			);
 			mainGroup = 38904763294FFD1700900EBC;
 			packageReferences = (
-				38A3477F2952220A00603086 /* XCRemoteSwiftPackageReference "CodeScanner" */,
 				3825E90229528B0500E2F921 /* XCRemoteSwiftPackageReference "Base32" */,
 				3825E9072954D6B800E2F921 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 				3825E90B2956119E00E2F921 /* XCRemoteSwiftPackageReference "AlertToast" */,
-				38F96528295A7A670059A3EB /* XCRemoteSwiftPackageReference "buymeacoffee" */,
 				3877E5F32A59D49F00C8E94B /* XCRemoteSwiftPackageReference "GAuthSwiftParser" */,
 			);
 			productRefGroup = 3890476D294FFD1700900EBC /* Products */;
@@ -319,6 +325,8 @@
 				3825E9062954D2D400E2F921 /* OTPStore.swift in Sources */,
 				389DCF15296BC7EB0054BD70 /* QRAddView.swift in Sources */,
 				38904772294FFD1700900EBC /* ContentView.swift in Sources */,
+				3899BF242A60F94400411031 /* ScannerViewController.swift in Sources */,
+				3899BF262A60F97800411031 /* CodeScanner.swift in Sources */,
 				3825E91129565A0500E2F921 /* OTPDetailView.swift in Sources */,
 				38A3477E2950DFBA00603086 /* OTPModel.swift in Sources */,
 				389DCF17296BCFC10054BD70 /* OTPManualAddView.swift in Sources */,
@@ -481,12 +489,14 @@
 				CODE_SIGN_ENTITLEMENTS = Sesame/SesameDebug.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_ASSET_PATHS = "\"Sesame/Preview Content\"";
 				DEVELOPMENT_TEAM = P3FJ87836G;
 				ENABLE_PREVIEWS = YES;
+				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Sesame/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Sesame;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Sesame uses the camera to scan QR codes.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -500,7 +510,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dws.tanishqdubey.Sesame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -516,12 +526,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Sesame/Preview Content\"";
 				DEVELOPMENT_TEAM = P3FJ87836G;
 				ENABLE_PREVIEWS = YES;
+				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Sesame/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Sesame;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Sesame uses the camera to scan QR codes.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -535,7 +547,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dws.Sesame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -694,22 +706,6 @@
 				version = 1.0.3;
 			};
 		};
-		38A3477F2952220A00603086 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/twostraws/CodeScanner";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
-			};
-		};
-		38F96528295A7A670059A3EB /* XCRemoteSwiftPackageReference "buymeacoffee" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/appcraftstudio/buymeacoffee";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -732,16 +728,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3877E5F32A59D49F00C8E94B /* XCRemoteSwiftPackageReference "GAuthSwiftParser" */;
 			productName = GAuthSwiftParser;
-		};
-		38A3478329523BBB00603086 /* CodeScanner */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 38A3477F2952220A00603086 /* XCRemoteSwiftPackageReference "CodeScanner" */;
-			productName = CodeScanner;
-		};
-		38F96529295A7A670059A3EB /* BuyMeACoffee */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 38F96528295A7A670059A3EB /* XCRemoteSwiftPackageReference "buymeacoffee" */;
-			productName = BuyMeACoffee;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -7,7 +7,6 @@
 
 import SwiftUI
 import CoreData
-import CodeScanner
 import AlertToast
 
 struct CustomEditButton: View {
@@ -246,13 +245,13 @@ struct OTPRowView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView(otpList: .constant([
-            try! OTPItem("otpauth://totp/admin@dws.rip?secret=JBSWY3DPEHPK3PXP&issuer=Email%20(Work)&algorithm=SHA1&period=30"),
-            try! OTPItem("otpauth://totp/admin@dws.rip?secret=JBSWY3DPEHPK3PXQ&issuer=AWS256&algorithm=SHA256&digits=8&period=30"),
-            try! OTPItem("otpauth://totp/admin@dws.rip?secret=JBSWY3DPEHPK3PXR&issuer=AWS512&algorithm=SHA512&digits=6&period=30"),
-            try! OTPItem("otpauth://totp/admin@dws.rip?secret=JBSWY3DPEHPK3PXS&issuer=AWS512&algorithm=SHA512&digits=6&period=45"),
-            try! OTPItem("otpauth://hotp/admin@dws.rip?secret=JBSWY3DPEHPK3PXT&issuer=AWS512&digits=6&period=45"),
-            try! OTPItem("otpauth://hotp/admin@dws.rip?secret=JBSWY3DPEHPK3PXU&issuer=AWS256&algorithm=SHA256&digits=6&period=45&counter=1"),
-            try! OTPItem("otpauth://hotp/admin@dws.rip?secret=JBSWY3DPEHPK3PXV&issuer=AWS512&algorithm=SHA512&digits=8&period=45&counter=10"),
+            try! OTPItem("otpauth://totp/me@example.com?secret=JBSWY3DPEHPK3PXP&issuer=Email&algorithm=SHA1&period=30"),
+            //try! OTPItem("otpauth://totp/admin@dws.rip?secret=JBSWY3DPEHPK3PXQ&issuer=AWS256&algorithm=SHA256&digits=8&period=30"),
+            try! OTPItem("otpauth://totp/lem.ee?secret=JBSWY3DPEHPK3PXR&issuer=SHA256%20Lemmy&algorithm=SHA512&digits=9&period=23"),
+            try! OTPItem("otpauth://totp/Bank?secret=JBSWY3DPEHPK3PXS&issuer=45%20Seconds&algorithm=SHA512&digits=6&period=45"),
+            try! OTPItem("otpauth://hotp/Work?secret=JBSWY3DPEHPK3PXT&issuer=RSA%20Keychain&digits=6&period=45&counter=3729"),
+            //try! OTPItem("otpauth://hotp/admin@dws.rip?secret=JBSWY3DPEHPK3PXU&issuer=AWS256&algorithm=SHA256&digits=6&period=45&counter=1"),
+            //try! OTPItem("otpauth://hotp/admin@dws.rip?secret=JBSWY3DPEHPK3PXV&issuer=AWS512&algorithm=SHA512&digits=8&period=45&counter=10"),
         ]), saveAction: {})
     }
 }

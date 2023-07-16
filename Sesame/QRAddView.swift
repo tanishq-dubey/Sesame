@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import CodeScanner
 import GAuthSwiftParser
 
 struct QRAddView: View {

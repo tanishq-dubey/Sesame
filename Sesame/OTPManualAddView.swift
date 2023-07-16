@@ -63,10 +63,12 @@ struct OTPManualAddView: View {
                         TextField("Length", value: $digits, formatter: NumberFormatter())
                             .multilineTextAlignment(.trailing)
                     }
-                    HStack {
-                        Text("Key Internval")
-                        Spacer()
-                        TextField("Interval", value: $interval, formatter: NumberFormatter()).multilineTextAlignment(.trailing)
+                    if type == OTPType.TOTP {
+                        HStack {
+                            Text("Key Interval")
+                            Spacer()
+                            TextField("Interval", value: $interval, formatter: NumberFormatter()).multilineTextAlignment(.trailing)
+                        }
                     }
                     if type == OTPType.HOTP {
                         HStack {
