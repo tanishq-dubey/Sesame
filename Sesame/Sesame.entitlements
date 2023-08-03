@@ -4,7 +4,7 @@
 <dict>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>com.dws.tanishqdubey.Sesame.default</string>
+		<string>$(AppIdentifierPrefix)com.dws.Sesame.default</string>
 	</array>
 </dict>
 </plist>

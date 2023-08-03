@@ -139,7 +139,6 @@
 				389DCF16296BCFC10054BD70 /* OTPManualAddView.swift */,
 				3899BF232A60F94400411031 /* ScannerViewController.swift */,
 				3899BF252A60F97800411031 /* CodeScanner.swift */,
-				3899BF272A60F9B100411031 /* New Group */,
 				3835A9952A73609B0059493C /* OTPQRImageAddView.swift */,
 			);
 			path = Sesame;
@@ -168,13 +167,6 @@
 				38904792294FFD1800900EBC /* SesameUITestsLaunchTests.swift */,
 			);
 			path = SesameUITests;
-			sourceTree = "<group>";
-		};
-		3899BF272A60F9B100411031 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		38A3478229523BBB00603086 /* Frameworks */ = {
@@ -516,7 +508,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4;
+				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dws.tanishqdubey.Sesame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

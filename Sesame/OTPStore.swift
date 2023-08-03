@@ -14,7 +14,11 @@ class OTPStore: ObservableObject {
     
     
     static func load(completion: @escaping (Result<[OTPItem], Error>)->Void) {
-        let kChain = Keychain(service: "com.dws.tanishqdubey.Sesame.default").synchronizable(true)
+#if DEBUG
+    let kChain = Keychain(service: "com.dws.tanishqdubey.Sesame.default").synchronizable(true)
+#else
+    let kChain = Keychain(service: "com.dws.Sesame.default").synchronizable(true)
+#endif
         let KEYCHAIN_APP_DATA_KEY: String = "otpstoredata"
         DispatchQueue.global(qos: .background).async {
             do {
@@ -25,6 +29,22 @@ class OTPStore: ObservableObject {
                     return
                 }
                 let lOTPs = try JSONDecoder().decode([OTPItem].self, from: data)
+                if (lOTPs.isEmpty) {
+                    // Should only need for one build, but will keep this here.
+                    // This will migrate users from the old key to the release iCloud synced key
+                    let kChainLegacy = Keychain(service: "com.dws.tanishqdubey.Sesame.default")
+                    guard let d = try kChainLegacy.getData(KEYCHAIN_APP_DATA_KEY) else {
+                        DispatchQueue.main.async {
+                            completion(.success([]))
+                        }
+                        return
+                    }
+                    let lOTPslegacy = try JSONDecoder().decode([OTPItem].self, from: d)
+                    DispatchQueue.main.async {
+                        completion(.success(lOTPslegacy))
+                    }
+                    return
+                }
                 DispatchQueue.main.async {
                     completion(.success(lOTPs))
                 }
@@ -37,7 +57,11 @@ class OTPStore: ObservableObject {
     }
     
     static func save(otps: [OTPItem], completion: @escaping (Result<Int, Error>)->Void) {
-        let kChain = Keychain(service: "com.dws.tanishqdubey.Sesame.default").synchronizable(true)
+#if DEBUG
+    let kChain = Keychain(service: "com.dws.tanishqdubey.Sesame.default").synchronizable(true)
+#else
+    let kChain = Keychain(service: "com.dws.Sesame.default").synchronizable(true)
+#endif
         let KEYCHAIN_APP_DATA_KEY: String = "otpstoredata"
         
         DispatchQueue.global(qos: .background).async {

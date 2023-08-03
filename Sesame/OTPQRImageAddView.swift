@@ -125,8 +125,8 @@ struct OTPQRImageAddView: View {
 }
 
 
-
-#Preview {
+struct OTPQRImageAddView_Previews: PreviewProvider {
+    static var previews: some View {
         OTPQRImageAddView(otpItems: .constant([
             try! OTPItem("otpauth://totp/admin@dws.rip?secret=JBSWY3DPEHPK3PXP&issuer=AWS&algorithm=SHA1&period=30"),
             try! OTPItem("otpauth://totp/admin@dws.rip?secret=JBSWY3DPEHPK3PXQ&issuer=AWS256&algorithm=SHA256&digits=8&period=30"),
@@ -136,4 +136,6 @@ struct OTPQRImageAddView: View {
             try! OTPItem("otpauth://hotp/admin@dws.rip?secret=JBSWY3DPEHPK3PXU&issuer=AWS256&algorithm=SHA256&digits=6&period=45&counter=1"),
             try! OTPItem("otpauth://hotp/admin@dws.rip?secret=JBSWY3DPEHPK3PXV&issuer=AWS512&algorithm=SHA512&digits=8&period=45&counter=10"),
         ]))
+    }
 }
+
