@@ -1,0 +1,98 @@
+{
+  "" : {
+    "diagnostics" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/Sesame-master.dia",
+    "emit-module-dependencies" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/Sesame-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/Sesame-master-emit-module.dia",
+    "swift-dependencies" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/Sesame-master.swiftdeps"
+  },
+  "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/GeneratedAssetSymbols~partial.swiftmodule"
+  },
+  "/Users/tanishqdubey/projects/Sesame/Sesame/ContentView.swift" : {
+    "const-values" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/ContentView.swiftconstvalues",
+    "dependencies" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/ContentView.d",
+    "diagnostics" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/ContentView.dia",
+    "index-unit-output-path" : "/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/ContentView.o",
+    "llvm-bc" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/ContentView.bc",
+    "object" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/ContentView.o",
+    "swift-dependencies" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/ContentView.swiftdeps",
+    "swiftmodule" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/ContentView~partial.swiftmodule"
+  },
+  "/Users/tanishqdubey/projects/Sesame/Sesame/OTPDetailView.swift" : {
+    "const-values" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/OTPDetailView.swiftconstvalues",
+    "dependencies" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/OTPDetailView.d",
+    "diagnostics" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/OTPDetailView.dia",
+    "index-unit-output-path" : "/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/OTPDetailView.o",
+    "llvm-bc" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/OTPDetailView.bc",
+    "object" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/OTPDetailView.o",
+    "swift-dependencies" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/OTPDetailView.swiftdeps",
+    "swiftmodule" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/OTPDetailView~partial.swiftmodule"
+  },
+  "/Users/tanishqdubey/projects/Sesame/Sesame/OTPManualAddView.swift" : {
+    "const-values" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/OTPManualAddView.swiftconstvalues",
+    "dependencies" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/OTPManualAddView.d",
+    "diagnostics" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/OTPManualAddView.dia",
+    "index-unit-output-path" : "/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/OTPManualAddView.o",
+    "llvm-bc" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/OTPManualAddView.bc",
+    "object" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/OTPManualAddView.o",
+    "swift-dependencies" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/OTPManualAddView.swiftdeps",
+    "swiftmodule" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/OTPManualAddView~partial.swiftmodule"
+  },
+  "/Users/tanishqdubey/projects/Sesame/Sesame/OTPModel.swift" : {
+    "const-values" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/OTPModel.swiftconstvalues",
+    "dependencies" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/OTPModel.d",
+    "diagnostics" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/OTPModel.dia",
+    "index-unit-output-path" : "/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/OTPModel.o",
+    "llvm-bc" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/OTPModel.bc",
+    "object" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/OTPModel.o",
+    "swift-dependencies" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/OTPModel.swiftdeps",
+    "swiftmodule" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/OTPModel~partial.swiftmodule"
+  },
+  "/Users/tanishqdubey/projects/Sesame/Sesame/OTPStore.swift" : {
+    "const-values" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/OTPStore.swiftconstvalues",
+    "dependencies" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/OTPStore.d",
+    "diagnostics" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/OTPStore.dia",
+    "index-unit-output-path" : "/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/OTPStore.o",
+    "llvm-bc" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/OTPStore.bc",
+    "object" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/OTPStore.o",
+    "swift-dependencies" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/OTPStore.swiftdeps",
+    "swiftmodule" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/OTPStore~partial.swiftmodule"
+  },
+  "/Users/tanishqdubey/projects/Sesame/Sesame/QRAddView.swift" : {
+    "const-values" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/QRAddView.swiftconstvalues",
+    "dependencies" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/QRAddView.d",
+    "diagnostics" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/QRAddView.dia",
+    "index-unit-output-path" : "/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/QRAddView.o",
+    "llvm-bc" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/QRAddView.bc",
+    "object" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/QRAddView.o",
+    "swift-dependencies" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/QRAddView.swiftdeps",
+    "swiftmodule" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/QRAddView~partial.swiftmodule"
+  },
+  "/Users/tanishqdubey/projects/Sesame/Sesame/SesameApp.swift" : {
+    "const-values" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/SesameApp.swiftconstvalues",
+    "dependencies" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/SesameApp.d",
+    "diagnostics" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/SesameApp.dia",
+    "index-unit-output-path" : "/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/SesameApp.o",
+    "llvm-bc" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/SesameApp.bc",
+    "object" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/SesameApp.o",
+    "swift-dependencies" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/SesameApp.swiftdeps",
+    "swiftmodule" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/SesameApp~partial.swiftmodule"
+  },
+  "/Users/tanishqdubey/projects/Sesame/Sesame/SettingsView.swift" : {
+    "const-values" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/SettingsView.swiftconstvalues",
+    "dependencies" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/SettingsView.d",
+    "diagnostics" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/SettingsView.dia",
+    "index-unit-output-path" : "/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/SettingsView.o",
+    "llvm-bc" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/SettingsView.bc",
+    "object" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/SettingsView.o",
+    "swift-dependencies" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/SettingsView.swiftdeps",
+    "swiftmodule" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/Sesame.build/Objects-normal/arm64/SettingsView~partial.swiftmodule"
+  }
+}

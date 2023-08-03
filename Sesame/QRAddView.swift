@@ -23,7 +23,7 @@ struct QRAddView: View {
             Alert(
                 title: Text("Could not add OTP"),
                 message: Text(addError),
-                dismissButton: .default(Text("ok"), action: {
+                dismissButton: .default(Text("OK"), action: {
                     self.presentationMode.wrappedValue.dismiss()
                 })
             )

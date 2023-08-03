@@ -1,0 +1,60 @@
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/AEADs/AES/GCM/AES-GCM.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/AEADs/AES/GCM/BoringSSL/AES-GCM_boring.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/AEADs/ChachaPoly/BoringSSL/ChaChaPoly_boring.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/AEADs/ChachaPoly/ChaChaPoly.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/AEADs/Cipher.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/AEADs/Nonces.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/ASN1/ASN1.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/ASN1/Basic\ ASN1\ Types/ASN1BitString.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/ASN1/Basic\ ASN1\ Types/ASN1Identifier.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/ASN1/Basic\ ASN1\ Types/ASN1Integer.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/ASN1/Basic\ ASN1\ Types/ASN1OctetString.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/ASN1/Basic\ ASN1\ Types/ArraySliceBigint.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/ASN1/Basic\ ASN1\ Types/ObjectIdentifier.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/ASN1/ECDSASignature.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/ASN1/PEMDocument.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/ASN1/PKCS8PrivateKey.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/ASN1/SEC1PrivateKey.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/ASN1/SubjectPublicKeyInfo.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/CryptoKitErrors.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/Digests/BoringSSL/Digest_boring.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/Digests/Digest.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/Digests/Digests.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/Digests/HashFunctions.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/Digests/HashFunctions_SHA2.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/Insecure/Insecure.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/Insecure/Insecure_HashFunctions.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/Key\ Agreement/BoringSSL/ECDH_boring.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/Key\ Agreement/DH.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/Key\ Agreement/ECDH.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/Key\ Derivation/HKDF.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/Keys/EC/BoringSSL/Ed25519_boring.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/Keys/EC/BoringSSL/EllipticCurvePoint_boring.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/Keys/EC/BoringSSL/EllipticCurve_boring.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/Keys/EC/BoringSSL/NISTCurvesKeys_boring.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/Keys/EC/BoringSSL/X25519Keys_boring.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/Keys/EC/Curve25519.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/Keys/EC/Ed25519.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/Keys/EC/NISTCurvesKeys.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/Keys/EC/X25519Keys.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/Keys/Symmetric/SymmetricKeys.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/Message\ Authentication\ Codes/HMAC/HMAC.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/Message\ Authentication\ Codes/MACFunctions.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/Message\ Authentication\ Codes/MessageAuthenticationCode.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/PRF/AES.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/Signatures/BoringSSL/ECDSASignature_boring.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/Signatures/BoringSSL/ECDSA_boring.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/Signatures/BoringSSL/EdDSA_boring.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/Signatures/ECDSA.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/Signatures/EdDSA.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/Signatures/Signature.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/Util/BoringSSL/ArbitraryPrecisionInteger_boring.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/Util/BoringSSL/CryptoKitErrors_boring.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/Util/BoringSSL/FiniteFieldArithmeticContext_boring.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/Util/BoringSSL/RNG_boring.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/Util/BoringSSL/SafeCompare_boring.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/Util/BoringSSL/Zeroization_boring.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/Util/PrettyBytes.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/Util/SafeCompare.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/Util/SecureBytes.swift
+/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/swift-crypto/Sources/Crypto/Util/Zeroization.swift

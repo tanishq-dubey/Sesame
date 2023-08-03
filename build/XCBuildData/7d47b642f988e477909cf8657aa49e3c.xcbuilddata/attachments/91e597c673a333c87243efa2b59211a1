@@ -1,0 +1,4 @@
+module protoc_gen_swift {
+header "protoc-gen-swift-Swift.h"
+export *
+}

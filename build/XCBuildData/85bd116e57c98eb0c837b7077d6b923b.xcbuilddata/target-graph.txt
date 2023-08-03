@@ -1,0 +1,6 @@
+Target dependency graph (3 targets)
+Target 'SesameUITests' in project 'Sesame'
+➜ Explicit dependency on target 'Sesame' in project 'Sesame'
+Target 'SesameTests' in project 'Sesame'
+➜ Explicit dependency on target 'Sesame' in project 'Sesame'
+Target 'Sesame' in project 'Sesame' (no dependencies)

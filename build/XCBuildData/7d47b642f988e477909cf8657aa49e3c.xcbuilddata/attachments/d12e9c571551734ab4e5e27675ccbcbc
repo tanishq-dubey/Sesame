@@ -1,0 +1,4 @@
+module Base32 {
+header "Base32-Swift.h"
+export *
+}

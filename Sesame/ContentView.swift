@@ -32,6 +32,8 @@ struct CustomEditButton: View {
 struct ContentView: View {
     @State private var showingAdd = false
     @State private var showingManualAdd = false
+    @State private var showingImageAdd = false
+    
     @State private var addError: String = ""
     @State private var confirmationShown = false
     @State private var itemToDelete: OTPItem? = nil
@@ -106,6 +108,12 @@ struct ContentView: View {
                         }) {
                             Label("Add Manually", systemImage: "plus")
                         }
+                        
+                        Button(action: {
+                            showingImageAdd.toggle()
+                        }) {
+                            Label("Add by Image", systemImage: "photo")
+                        }
                     }
                     label: {
                         Label("Add", systemImage: "plus")
@@ -121,6 +129,9 @@ struct ContentView: View {
             }
             .navigationDestination(isPresented: $showingManualAdd) {
                 OTPManualAddView(otpList: $otpList)
+            }
+            .navigationDestination(isPresented: $showingImageAdd) {
+                OTPQRImageAddView(otpItems: $otpList)
             }
         }
         

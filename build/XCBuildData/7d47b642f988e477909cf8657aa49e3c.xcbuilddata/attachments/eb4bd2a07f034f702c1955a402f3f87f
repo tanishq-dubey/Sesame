@@ -1,0 +1,48 @@
+{
+  "" : {
+    "diagnostics" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/CodeScanner/build/CodeScanner.build/Debug-iphoneos/CodeScanner.build/Objects-normal/arm64/CodeScanner-master.dia",
+    "emit-module-dependencies" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/CodeScanner/build/CodeScanner.build/Debug-iphoneos/CodeScanner.build/Objects-normal/arm64/CodeScanner-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/CodeScanner/build/CodeScanner.build/Debug-iphoneos/CodeScanner.build/Objects-normal/arm64/CodeScanner-master-emit-module.dia",
+    "swift-dependencies" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/CodeScanner/build/CodeScanner.build/Debug-iphoneos/CodeScanner.build/Objects-normal/arm64/CodeScanner-master.swiftdeps"
+  },
+  "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/CodeScanner/build/CodeScanner.build/Debug-iphoneos/CodeScanner.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/CodeScanner/build/CodeScanner.build/Debug-iphoneos/CodeScanner.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/CodeScanner/build/CodeScanner.build/Debug-iphoneos/CodeScanner.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/CodeScanner/build/CodeScanner.build/Debug-iphoneos/CodeScanner.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/CodeScanner.build/Debug-iphoneos/CodeScanner.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/CodeScanner/build/CodeScanner.build/Debug-iphoneos/CodeScanner.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/CodeScanner/build/CodeScanner.build/Debug-iphoneos/CodeScanner.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/CodeScanner/build/CodeScanner.build/Debug-iphoneos/CodeScanner.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/CodeScanner/build/CodeScanner.build/Debug-iphoneos/CodeScanner.build/Objects-normal/arm64/GeneratedAssetSymbols~partial.swiftmodule"
+  },
+  "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/CodeScanner/build/CodeScanner.build/Debug-iphoneos/CodeScanner.build/DerivedSources/resource_bundle_accessor.swift" : {
+    "const-values" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/CodeScanner/build/CodeScanner.build/Debug-iphoneos/CodeScanner.build/Objects-normal/arm64/resource_bundle_accessor.swiftconstvalues",
+    "dependencies" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/CodeScanner/build/CodeScanner.build/Debug-iphoneos/CodeScanner.build/Objects-normal/arm64/resource_bundle_accessor.d",
+    "diagnostics" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/CodeScanner/build/CodeScanner.build/Debug-iphoneos/CodeScanner.build/Objects-normal/arm64/resource_bundle_accessor.dia",
+    "index-unit-output-path" : "/CodeScanner.build/Debug-iphoneos/CodeScanner.build/Objects-normal/arm64/resource_bundle_accessor.o",
+    "llvm-bc" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/CodeScanner/build/CodeScanner.build/Debug-iphoneos/CodeScanner.build/Objects-normal/arm64/resource_bundle_accessor.bc",
+    "object" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/CodeScanner/build/CodeScanner.build/Debug-iphoneos/CodeScanner.build/Objects-normal/arm64/resource_bundle_accessor.o",
+    "swift-dependencies" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/CodeScanner/build/CodeScanner.build/Debug-iphoneos/CodeScanner.build/Objects-normal/arm64/resource_bundle_accessor.swiftdeps",
+    "swiftmodule" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/CodeScanner/build/CodeScanner.build/Debug-iphoneos/CodeScanner.build/Objects-normal/arm64/resource_bundle_accessor~partial.swiftmodule"
+  },
+  "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/CodeScanner/Sources/CodeScanner/CodeScanner.swift" : {
+    "const-values" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/CodeScanner/build/CodeScanner.build/Debug-iphoneos/CodeScanner.build/Objects-normal/arm64/CodeScanner.swiftconstvalues",
+    "dependencies" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/CodeScanner/build/CodeScanner.build/Debug-iphoneos/CodeScanner.build/Objects-normal/arm64/CodeScanner.d",
+    "diagnostics" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/CodeScanner/build/CodeScanner.build/Debug-iphoneos/CodeScanner.build/Objects-normal/arm64/CodeScanner.dia",
+    "index-unit-output-path" : "/CodeScanner.build/Debug-iphoneos/CodeScanner.build/Objects-normal/arm64/CodeScanner.o",
+    "llvm-bc" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/CodeScanner/build/CodeScanner.build/Debug-iphoneos/CodeScanner.build/Objects-normal/arm64/CodeScanner.bc",
+    "object" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/CodeScanner/build/CodeScanner.build/Debug-iphoneos/CodeScanner.build/Objects-normal/arm64/CodeScanner.o",
+    "swift-dependencies" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/CodeScanner/build/CodeScanner.build/Debug-iphoneos/CodeScanner.build/Objects-normal/arm64/CodeScanner.swiftdeps",
+    "swiftmodule" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/CodeScanner/build/CodeScanner.build/Debug-iphoneos/CodeScanner.build/Objects-normal/arm64/CodeScanner~partial.swiftmodule"
+  },
+  "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/CodeScanner/Sources/CodeScanner/ScannerViewController.swift" : {
+    "const-values" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/CodeScanner/build/CodeScanner.build/Debug-iphoneos/CodeScanner.build/Objects-normal/arm64/ScannerViewController.swiftconstvalues",
+    "dependencies" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/CodeScanner/build/CodeScanner.build/Debug-iphoneos/CodeScanner.build/Objects-normal/arm64/ScannerViewController.d",
+    "diagnostics" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/CodeScanner/build/CodeScanner.build/Debug-iphoneos/CodeScanner.build/Objects-normal/arm64/ScannerViewController.dia",
+    "index-unit-output-path" : "/CodeScanner.build/Debug-iphoneos/CodeScanner.build/Objects-normal/arm64/ScannerViewController.o",
+    "llvm-bc" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/CodeScanner/build/CodeScanner.build/Debug-iphoneos/CodeScanner.build/Objects-normal/arm64/ScannerViewController.bc",
+    "object" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/CodeScanner/build/CodeScanner.build/Debug-iphoneos/CodeScanner.build/Objects-normal/arm64/ScannerViewController.o",
+    "swift-dependencies" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/CodeScanner/build/CodeScanner.build/Debug-iphoneos/CodeScanner.build/Objects-normal/arm64/ScannerViewController.swiftdeps",
+    "swiftmodule" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/CodeScanner/build/CodeScanner.build/Debug-iphoneos/CodeScanner.build/Objects-normal/arm64/ScannerViewController~partial.swiftmodule"
+  }
+}

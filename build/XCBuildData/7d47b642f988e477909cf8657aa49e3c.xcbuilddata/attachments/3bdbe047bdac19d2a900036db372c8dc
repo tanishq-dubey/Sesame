@@ -1,0 +1,4 @@
+module GAuthSwiftParser {
+header "GAuthSwiftParser-Swift.h"
+export *
+}

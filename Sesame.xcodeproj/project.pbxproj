@@ -13,6 +13,7 @@
 		3825E90D2956119E00E2F921 /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 3825E90C2956119E00E2F921 /* AlertToast */; };
 		3825E90F295616B300E2F921 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3825E90E295616B300E2F921 /* SettingsView.swift */; };
 		3825E91129565A0500E2F921 /* OTPDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3825E91029565A0500E2F921 /* OTPDetailView.swift */; };
+		3835A9962A73609B0059493C /* OTPQRImageAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3835A9952A73609B0059493C /* OTPQRImageAddView.swift */; };
 		3877E5F52A59D49F00C8E94B /* GAuthSwiftParser in Frameworks */ = {isa = PBXBuildFile; productRef = 3877E5F42A59D49F00C8E94B /* GAuthSwiftParser */; };
 		38904770294FFD1700900EBC /* SesameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3890476F294FFD1700900EBC /* SesameApp.swift */; };
 		38904772294FFD1700900EBC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38904771294FFD1700900EBC /* ContentView.swift */; };
@@ -50,6 +51,7 @@
 		3825E90A2954DE7C00E2F921 /* SesameDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SesameDebug.entitlements; sourceTree = "<group>"; };
 		3825E90E295616B300E2F921 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		3825E91029565A0500E2F921 /* OTPDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPDetailView.swift; sourceTree = "<group>"; };
+		3835A9952A73609B0059493C /* OTPQRImageAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPQRImageAddView.swift; sourceTree = "<group>"; };
 		3890476C294FFD1700900EBC /* Sesame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sesame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3890476F294FFD1700900EBC /* SesameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SesameApp.swift; sourceTree = "<group>"; };
 		38904771294FFD1700900EBC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 		389DCF14296BC7EB0054BD70 /* QRAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRAddView.swift; sourceTree = "<group>"; };
 		389DCF16296BCFC10054BD70 /* OTPManualAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPManualAddView.swift; sourceTree = "<group>"; };
 		38A3477D2950DFBA00603086 /* OTPModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPModel.swift; sourceTree = "<group>"; };
+		38A8F7262A7B4E0C0060CAE8 /* Sesame.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sesame.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +124,7 @@
 		3890476E294FFD1700900EBC /* Sesame */ = {
 			isa = PBXGroup;
 			children = (
+				38A8F7262A7B4E0C0060CAE8 /* Sesame.entitlements */,
 				3825E90A2954DE7C00E2F921 /* SesameDebug.entitlements */,
 				3890476F294FFD1700900EBC /* SesameApp.swift */,
 				38904771294FFD1700900EBC /* ContentView.swift */,
@@ -136,6 +140,7 @@
 				3899BF232A60F94400411031 /* ScannerViewController.swift */,
 				3899BF252A60F97800411031 /* CodeScanner.swift */,
 				3899BF272A60F9B100411031 /* New Group */,
+				3835A9952A73609B0059493C /* OTPQRImageAddView.swift */,
 			);
 			path = Sesame;
 			sourceTree = "<group>";
@@ -322,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3825E90F295616B300E2F921 /* SettingsView.swift in Sources */,
+				3835A9962A73609B0059493C /* OTPQRImageAddView.swift in Sources */,
 				3825E9062954D2D400E2F921 /* OTPStore.swift in Sources */,
 				389DCF15296BC7EB0054BD70 /* QRAddView.swift in Sources */,
 				38904772294FFD1700900EBC /* ContentView.swift in Sources */,
@@ -489,7 +495,7 @@
 				CODE_SIGN_ENTITLEMENTS = Sesame/SesameDebug.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 16;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_ASSET_PATHS = "\"Sesame/Preview Content\"";
 				DEVELOPMENT_TEAM = P3FJ87836G;
 				ENABLE_PREVIEWS = YES;
@@ -510,7 +516,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dws.tanishqdubey.Sesame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -525,8 +531,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Sesame/Sesame.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Sesame/Preview Content\"";
 				DEVELOPMENT_TEAM = P3FJ87836G;
 				ENABLE_PREVIEWS = YES;
@@ -547,7 +554,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dws.Sesame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

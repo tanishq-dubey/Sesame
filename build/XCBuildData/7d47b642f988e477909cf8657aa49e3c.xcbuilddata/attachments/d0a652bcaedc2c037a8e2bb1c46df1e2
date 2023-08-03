@@ -1,0 +1,28 @@
+{
+  "" : {
+    "diagnostics" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/SesameUITests.build/Objects-normal/arm64/SesameUITests-master.dia",
+    "emit-module-dependencies" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/SesameUITests.build/Objects-normal/arm64/SesameUITests-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/SesameUITests.build/Objects-normal/arm64/SesameUITests-master-emit-module.dia",
+    "swift-dependencies" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/SesameUITests.build/Objects-normal/arm64/SesameUITests-master.swiftdeps"
+  },
+  "/Users/tanishqdubey/projects/Sesame/SesameUITests/SesameUITests.swift" : {
+    "const-values" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/SesameUITests.build/Objects-normal/arm64/SesameUITests.swiftconstvalues",
+    "dependencies" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/SesameUITests.build/Objects-normal/arm64/SesameUITests.d",
+    "diagnostics" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/SesameUITests.build/Objects-normal/arm64/SesameUITests.dia",
+    "index-unit-output-path" : "/Sesame.build/Debug-iphoneos/SesameUITests.build/Objects-normal/arm64/SesameUITests.o",
+    "llvm-bc" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/SesameUITests.build/Objects-normal/arm64/SesameUITests.bc",
+    "object" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/SesameUITests.build/Objects-normal/arm64/SesameUITests.o",
+    "swift-dependencies" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/SesameUITests.build/Objects-normal/arm64/SesameUITests.swiftdeps",
+    "swiftmodule" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/SesameUITests.build/Objects-normal/arm64/SesameUITests~partial.swiftmodule"
+  },
+  "/Users/tanishqdubey/projects/Sesame/SesameUITests/SesameUITestsLaunchTests.swift" : {
+    "const-values" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/SesameUITests.build/Objects-normal/arm64/SesameUITestsLaunchTests.swiftconstvalues",
+    "dependencies" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/SesameUITests.build/Objects-normal/arm64/SesameUITestsLaunchTests.d",
+    "diagnostics" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/SesameUITests.build/Objects-normal/arm64/SesameUITestsLaunchTests.dia",
+    "index-unit-output-path" : "/Sesame.build/Debug-iphoneos/SesameUITests.build/Objects-normal/arm64/SesameUITestsLaunchTests.o",
+    "llvm-bc" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/SesameUITests.build/Objects-normal/arm64/SesameUITestsLaunchTests.bc",
+    "object" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/SesameUITests.build/Objects-normal/arm64/SesameUITestsLaunchTests.o",
+    "swift-dependencies" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/SesameUITests.build/Objects-normal/arm64/SesameUITestsLaunchTests.swiftdeps",
+    "swiftmodule" : "/Users/tanishqdubey/projects/Sesame/build/Sesame.build/Debug-iphoneos/SesameUITests.build/Objects-normal/arm64/SesameUITestsLaunchTests~partial.swiftmodule"
+  }
+}

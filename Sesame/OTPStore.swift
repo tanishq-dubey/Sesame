@@ -14,7 +14,7 @@ class OTPStore: ObservableObject {
     
     
     static func load(completion: @escaping (Result<[OTPItem], Error>)->Void) {
-        let kChain = Keychain(service: "com.dws.tanishqdubey.Sesame.default")
+        let kChain = Keychain(service: "com.dws.tanishqdubey.Sesame.default").synchronizable(true)
         let KEYCHAIN_APP_DATA_KEY: String = "otpstoredata"
         DispatchQueue.global(qos: .background).async {
             do {
@@ -37,13 +37,13 @@ class OTPStore: ObservableObject {
     }
     
     static func save(otps: [OTPItem], completion: @escaping (Result<Int, Error>)->Void) {
-        let kChain = Keychain(service: "com.dws.tanishqdubey.Sesame.default")
+        let kChain = Keychain(service: "com.dws.tanishqdubey.Sesame.default").synchronizable(true)
         let KEYCHAIN_APP_DATA_KEY: String = "otpstoredata"
         
         DispatchQueue.global(qos: .background).async {
             do {
                 let data = try JSONEncoder().encode(otps)
-                try kChain.set(data, key: KEYCHAIN_APP_DATA_KEY)
+                try kChain.synchronizable(true).set(data, key: KEYCHAIN_APP_DATA_KEY)
                 DispatchQueue.main.async {
                     completion(.success(otps.count))
                 }

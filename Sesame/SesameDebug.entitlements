@@ -5,6 +5,7 @@
 	<key>keychain-access-groups</key>
 	<array>
 		<string>$(AppIdentifierPrefix)com.dws.tanishqdubey.Sesame</string>
+		<string>$(AppIdentifierPrefix)com.dws.tanishqdubey.Sesame.default</string>
 	</array>
 </dict>
 </plist>

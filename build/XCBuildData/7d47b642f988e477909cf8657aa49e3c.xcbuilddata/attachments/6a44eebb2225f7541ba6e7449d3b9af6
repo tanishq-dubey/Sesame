@@ -1,0 +1,38 @@
+{
+  "" : {
+    "diagnostics" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/AlertToast/build/AlertToast.build/Debug-iphoneos/AlertToast.build/Objects-normal/arm64/AlertToast-master.dia",
+    "emit-module-dependencies" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/AlertToast/build/AlertToast.build/Debug-iphoneos/AlertToast.build/Objects-normal/arm64/AlertToast-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/AlertToast/build/AlertToast.build/Debug-iphoneos/AlertToast.build/Objects-normal/arm64/AlertToast-master-emit-module.dia",
+    "swift-dependencies" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/AlertToast/build/AlertToast.build/Debug-iphoneos/AlertToast.build/Objects-normal/arm64/AlertToast-master.swiftdeps"
+  },
+  "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/AlertToast/Sources/AlertToast/ActivityIndicator.swift" : {
+    "const-values" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/AlertToast/build/AlertToast.build/Debug-iphoneos/AlertToast.build/Objects-normal/arm64/ActivityIndicator.swiftconstvalues",
+    "dependencies" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/AlertToast/build/AlertToast.build/Debug-iphoneos/AlertToast.build/Objects-normal/arm64/ActivityIndicator.d",
+    "diagnostics" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/AlertToast/build/AlertToast.build/Debug-iphoneos/AlertToast.build/Objects-normal/arm64/ActivityIndicator.dia",
+    "index-unit-output-path" : "/AlertToast.build/Debug-iphoneos/AlertToast.build/Objects-normal/arm64/ActivityIndicator.o",
+    "llvm-bc" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/AlertToast/build/AlertToast.build/Debug-iphoneos/AlertToast.build/Objects-normal/arm64/ActivityIndicator.bc",
+    "object" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/AlertToast/build/AlertToast.build/Debug-iphoneos/AlertToast.build/Objects-normal/arm64/ActivityIndicator.o",
+    "swift-dependencies" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/AlertToast/build/AlertToast.build/Debug-iphoneos/AlertToast.build/Objects-normal/arm64/ActivityIndicator.swiftdeps",
+    "swiftmodule" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/AlertToast/build/AlertToast.build/Debug-iphoneos/AlertToast.build/Objects-normal/arm64/ActivityIndicator~partial.swiftmodule"
+  },
+  "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/AlertToast/Sources/AlertToast/AlertToast.swift" : {
+    "const-values" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/AlertToast/build/AlertToast.build/Debug-iphoneos/AlertToast.build/Objects-normal/arm64/AlertToast.swiftconstvalues",
+    "dependencies" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/AlertToast/build/AlertToast.build/Debug-iphoneos/AlertToast.build/Objects-normal/arm64/AlertToast.d",
+    "diagnostics" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/AlertToast/build/AlertToast.build/Debug-iphoneos/AlertToast.build/Objects-normal/arm64/AlertToast.dia",
+    "index-unit-output-path" : "/AlertToast.build/Debug-iphoneos/AlertToast.build/Objects-normal/arm64/AlertToast.o",
+    "llvm-bc" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/AlertToast/build/AlertToast.build/Debug-iphoneos/AlertToast.build/Objects-normal/arm64/AlertToast.bc",
+    "object" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/AlertToast/build/AlertToast.build/Debug-iphoneos/AlertToast.build/Objects-normal/arm64/AlertToast.o",
+    "swift-dependencies" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/AlertToast/build/AlertToast.build/Debug-iphoneos/AlertToast.build/Objects-normal/arm64/AlertToast.swiftdeps",
+    "swiftmodule" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/AlertToast/build/AlertToast.build/Debug-iphoneos/AlertToast.build/Objects-normal/arm64/AlertToast~partial.swiftmodule"
+  },
+  "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/AlertToast/Sources/AlertToast/BlurView.swift" : {
+    "const-values" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/AlertToast/build/AlertToast.build/Debug-iphoneos/AlertToast.build/Objects-normal/arm64/BlurView.swiftconstvalues",
+    "dependencies" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/AlertToast/build/AlertToast.build/Debug-iphoneos/AlertToast.build/Objects-normal/arm64/BlurView.d",
+    "diagnostics" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/AlertToast/build/AlertToast.build/Debug-iphoneos/AlertToast.build/Objects-normal/arm64/BlurView.dia",
+    "index-unit-output-path" : "/AlertToast.build/Debug-iphoneos/AlertToast.build/Objects-normal/arm64/BlurView.o",
+    "llvm-bc" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/AlertToast/build/AlertToast.build/Debug-iphoneos/AlertToast.build/Objects-normal/arm64/BlurView.bc",
+    "object" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/AlertToast/build/AlertToast.build/Debug-iphoneos/AlertToast.build/Objects-normal/arm64/BlurView.o",
+    "swift-dependencies" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/AlertToast/build/AlertToast.build/Debug-iphoneos/AlertToast.build/Objects-normal/arm64/BlurView.swiftdeps",
+    "swiftmodule" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/AlertToast/build/AlertToast.build/Debug-iphoneos/AlertToast.build/Objects-normal/arm64/BlurView~partial.swiftmodule"
+  }
+}

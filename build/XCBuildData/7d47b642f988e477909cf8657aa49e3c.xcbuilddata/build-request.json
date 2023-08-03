@@ -1,0 +1,162 @@
+{
+  "buildCommand" : {
+    "command" : "prepareForIndexing",
+    "enableIndexBuildArena" : false,
+    "targets" : null
+  },
+  "configuredTargets" : [
+    {
+      "guid" : "PACKAGE-TARGET:AlertToast"
+    },
+    {
+      "guid" : "PACKAGE-PRODUCT:AlertToast"
+    },
+    {
+      "guid" : "PACKAGE-PRODUCT:Base32"
+    },
+    {
+      "guid" : "PACKAGE-TARGET:Base32"
+    },
+    {
+      "guid" : "PACKAGE-TARGET:BuyMeACoffee"
+    },
+    {
+      "guid" : "PACKAGE-PRODUCT:BuyMeACoffee"
+    },
+    {
+      "guid" : "PACKAGE-PRODUCT:BuyMeACoffeeDynamic"
+    },
+    {
+      "guid" : "PACKAGE-RESOURCE:BuyMeACoffee"
+    },
+    {
+      "guid" : "PACKAGE-TARGET:CodeScanner"
+    },
+    {
+      "guid" : "PACKAGE-PRODUCT:CodeScanner"
+    },
+    {
+      "guid" : "PACKAGE-RESOURCE:CodeScanner"
+    },
+    {
+      "guid" : "PACKAGE-TARGET:GAuthSwiftParser"
+    },
+    {
+      "guid" : "PACKAGE-PRODUCT:GAuthSwiftParser"
+    },
+    {
+      "guid" : "PACKAGE-TARGET:KeychainAccess"
+    },
+    {
+      "guid" : "PACKAGE-PRODUCT:KeychainAccess"
+    },
+    {
+      "guid" : "a86e1a9a5874d447787ce4429368b2e4047a42f46d6f92581dbfbaf5b3cfd658"
+    },
+    {
+      "guid" : "a86e1a9a5874d447787ce4429368b2e4b793183db71f7434eb0cf275393f392e"
+    },
+    {
+      "guid" : "a86e1a9a5874d447787ce4429368b2e4ade061aea8b68aaafc0e9a1fe45436c8"
+    },
+    {
+      "guid" : "PACKAGE-PRODUCT:SwiftOTP"
+    },
+    {
+      "guid" : "PACKAGE-TARGET:SwiftOTP"
+    },
+    {
+      "guid" : "PACKAGE-PRODUCT:SwiftOTP-Dynamic"
+    },
+    {
+      "guid" : "PACKAGE-TARGET:SwiftProtobuf"
+    },
+    {
+      "guid" : "PACKAGE-PRODUCT:SwiftProtobuf"
+    },
+    {
+      "guid" : "PACKAGE-PRODUCT:SwiftProtobufPlugin"
+    },
+    {
+      "guid" : "PACKAGE-TARGET:SwiftProtobufPlugin"
+    },
+    {
+      "guid" : "PACKAGE-TARGET:SwiftProtobufPluginLibrary"
+    },
+    {
+      "guid" : "PACKAGE-PRODUCT:SwiftProtobufPluginLibrary"
+    },
+    {
+      "guid" : "PACKAGE-PRODUCT:protoc-gen-swift"
+    },
+    {
+      "guid" : "PACKAGE-TARGET:protoc-gen-swift-6C69A13E691DF668-testable"
+    },
+    {
+      "guid" : "PACKAGE-TARGET:CCryptoBoringSSL"
+    },
+    {
+      "guid" : "PACKAGE-TARGET:CCryptoBoringSSLShims"
+    },
+    {
+      "guid" : "PACKAGE-PRODUCT:Crypto"
+    },
+    {
+      "guid" : "PACKAGE-TARGET:Crypto"
+    }
+  ],
+  "containerPath" : "/Users/tanishqdubey/projects/Sesame/Sesame.xcodeproj",
+  "continueBuildingAfterErrors" : true,
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "activeArchitecture" : "arm64",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : false,
+      "platform" : "iphoneos",
+      "sdk" : "iphoneos17.0",
+      "sdkVariant" : "iphoneos",
+      "supportedArchitectures" : [
+        "arm64e",
+        "arm64v8",
+        "arm64",
+        "armv8"
+      ],
+      "targetArchitecture" : "arm64"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "",
+      "buildProductsPath" : "",
+      "derivedDataPath" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData",
+      "indexDataStoreFolderPath" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/Index.noindex/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/Index.noindex/PrecompiledHeaders",
+      "pchPath" : ""
+    },
+    "configurationName" : "Debug",
+    "overrides" : {
+      "synthesized" : {
+        "table" : {
+          "ASSETCATALOG_FILTER_FOR_DEVICE_MODEL" : "iPhone15,3",
+          "ASSETCATALOG_FILTER_FOR_DEVICE_OS_VERSION" : "17.0",
+          "ASSETCATALOG_FILTER_FOR_THINNING_DEVICE_CONFIGURATION" : "iPhone15,3",
+          "BUILD_ACTIVE_RESOURCES_ONLY" : "YES",
+          "ENABLE_PREVIEWS" : "NO",
+          "ENABLE_XOJIT_PREVIEWS" : "NO",
+          "TARGET_DEVICE_IDENTIFIER" : "00008120-001248811E9B401E",
+          "TARGET_DEVICE_MODEL" : "iPhone15,3",
+          "TARGET_DEVICE_OS_VERSION" : "17.0",
+          "TARGET_DEVICE_PLATFORM_NAME" : "iphoneos"
+        }
+      }
+    }
+  },
+  "qos" : "default",
+  "schemeCommand" : "launch",
+  "showNonLoggedProgress" : true,
+  "useDryRun" : true,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}

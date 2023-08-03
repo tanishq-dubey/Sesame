@@ -1,0 +1,88 @@
+{
+  "" : {
+    "diagnostics" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/SwiftOTP-master.dia",
+    "emit-module-dependencies" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/SwiftOTP-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/SwiftOTP-master-emit-module.dia",
+    "swift-dependencies" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/SwiftOTP-master.swiftdeps"
+  },
+  "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/SwiftOTP/Base32/Base32.swift" : {
+    "const-values" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/Base32.swiftconstvalues",
+    "dependencies" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/Base32.d",
+    "diagnostics" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/Base32.dia",
+    "index-unit-output-path" : "/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/Base32.o",
+    "llvm-bc" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/Base32.bc",
+    "object" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/Base32.o",
+    "swift-dependencies" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/Base32.swiftdeps",
+    "swiftmodule" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/Base32~partial.swiftmodule"
+  },
+  "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/SwiftOTP/Base32/StringExtension.swift" : {
+    "const-values" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/StringExtension.swiftconstvalues",
+    "dependencies" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/StringExtension.d",
+    "diagnostics" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/StringExtension.dia",
+    "index-unit-output-path" : "/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/StringExtension.o",
+    "llvm-bc" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/StringExtension.bc",
+    "object" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/StringExtension.o",
+    "swift-dependencies" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/StringExtension.swiftdeps",
+    "swiftmodule" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/StringExtension~partial.swiftmodule"
+  },
+  "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/SwiftOTP/Data+Utilities.swift" : {
+    "const-values" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/Data+Utilities.swiftconstvalues",
+    "dependencies" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/Data+Utilities.d",
+    "diagnostics" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/Data+Utilities.dia",
+    "index-unit-output-path" : "/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/Data+Utilities.o",
+    "llvm-bc" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/Data+Utilities.bc",
+    "object" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/Data+Utilities.o",
+    "swift-dependencies" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/Data+Utilities.swiftdeps",
+    "swiftmodule" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/Data+Utilities~partial.swiftmodule"
+  },
+  "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/SwiftOTP/Generator.swift" : {
+    "const-values" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/Generator.swiftconstvalues",
+    "dependencies" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/Generator.d",
+    "diagnostics" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/Generator.dia",
+    "index-unit-output-path" : "/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/Generator.o",
+    "llvm-bc" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/Generator.bc",
+    "object" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/Generator.o",
+    "swift-dependencies" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/Generator.swiftdeps",
+    "swiftmodule" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/Generator~partial.swiftmodule"
+  },
+  "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/SwiftOTP/HOTP.swift" : {
+    "const-values" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/HOTP.swiftconstvalues",
+    "dependencies" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/HOTP.d",
+    "diagnostics" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/HOTP.dia",
+    "index-unit-output-path" : "/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/HOTP.o",
+    "llvm-bc" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/HOTP.bc",
+    "object" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/HOTP.o",
+    "swift-dependencies" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/HOTP.swiftdeps",
+    "swiftmodule" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/HOTP~partial.swiftmodule"
+  },
+  "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/SwiftOTP/OTPAlgorithm.swift" : {
+    "const-values" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/OTPAlgorithm.swiftconstvalues",
+    "dependencies" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/OTPAlgorithm.d",
+    "diagnostics" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/OTPAlgorithm.dia",
+    "index-unit-output-path" : "/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/OTPAlgorithm.o",
+    "llvm-bc" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/OTPAlgorithm.bc",
+    "object" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/OTPAlgorithm.o",
+    "swift-dependencies" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/OTPAlgorithm.swiftdeps",
+    "swiftmodule" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/OTPAlgorithm~partial.swiftmodule"
+  },
+  "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/SwiftOTP/TOTP.swift" : {
+    "const-values" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/TOTP.swiftconstvalues",
+    "dependencies" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/TOTP.d",
+    "diagnostics" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/TOTP.dia",
+    "index-unit-output-path" : "/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/TOTP.o",
+    "llvm-bc" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/TOTP.bc",
+    "object" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/TOTP.o",
+    "swift-dependencies" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/TOTP.swiftdeps",
+    "swiftmodule" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/TOTP~partial.swiftmodule"
+  },
+  "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/SwiftOTP/UInt64+Data.swift" : {
+    "const-values" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/UInt64+Data.swiftconstvalues",
+    "dependencies" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/UInt64+Data.d",
+    "diagnostics" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/UInt64+Data.dia",
+    "index-unit-output-path" : "/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/UInt64+Data.o",
+    "llvm-bc" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/UInt64+Data.bc",
+    "object" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/UInt64+Data.o",
+    "swift-dependencies" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/UInt64+Data.swiftdeps",
+    "swiftmodule" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/SwiftOTP/build/SwiftOTP.build/Debug-iphoneos/SwiftOTP.build/Objects-normal/arm64/UInt64+Data~partial.swiftmodule"
+  }
+}

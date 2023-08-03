@@ -1,0 +1,48 @@
+{
+  "" : {
+    "diagnostics" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/Base32/build/Base32.build/Debug-iphoneos/Base32.build/Objects-normal/arm64/Base32-master.dia",
+    "emit-module-dependencies" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/Base32/build/Base32.build/Debug-iphoneos/Base32.build/Objects-normal/arm64/Base32-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/Base32/build/Base32.build/Debug-iphoneos/Base32.build/Objects-normal/arm64/Base32-master-emit-module.dia",
+    "swift-dependencies" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/Base32/build/Base32.build/Debug-iphoneos/Base32.build/Objects-normal/arm64/Base32-master.swiftdeps"
+  },
+  "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/Base32/Sources/Base32/Base16.swift" : {
+    "const-values" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/Base32/build/Base32.build/Debug-iphoneos/Base32.build/Objects-normal/arm64/Base16.swiftconstvalues",
+    "dependencies" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/Base32/build/Base32.build/Debug-iphoneos/Base32.build/Objects-normal/arm64/Base16.d",
+    "diagnostics" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/Base32/build/Base32.build/Debug-iphoneos/Base32.build/Objects-normal/arm64/Base16.dia",
+    "index-unit-output-path" : "/Base32.build/Debug-iphoneos/Base32.build/Objects-normal/arm64/Base16.o",
+    "llvm-bc" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/Base32/build/Base32.build/Debug-iphoneos/Base32.build/Objects-normal/arm64/Base16.bc",
+    "object" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/Base32/build/Base32.build/Debug-iphoneos/Base32.build/Objects-normal/arm64/Base16.o",
+    "swift-dependencies" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/Base32/build/Base32.build/Debug-iphoneos/Base32.build/Objects-normal/arm64/Base16.swiftdeps",
+    "swiftmodule" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/Base32/build/Base32.build/Debug-iphoneos/Base32.build/Objects-normal/arm64/Base16~partial.swiftmodule"
+  },
+  "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/Base32/Sources/Base32/Base32.swift" : {
+    "const-values" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/Base32/build/Base32.build/Debug-iphoneos/Base32.build/Objects-normal/arm64/Base32.swiftconstvalues",
+    "dependencies" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/Base32/build/Base32.build/Debug-iphoneos/Base32.build/Objects-normal/arm64/Base32.d",
+    "diagnostics" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/Base32/build/Base32.build/Debug-iphoneos/Base32.build/Objects-normal/arm64/Base32.dia",
+    "index-unit-output-path" : "/Base32.build/Debug-iphoneos/Base32.build/Objects-normal/arm64/Base32.o",
+    "llvm-bc" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/Base32/build/Base32.build/Debug-iphoneos/Base32.build/Objects-normal/arm64/Base32.bc",
+    "object" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/Base32/build/Base32.build/Debug-iphoneos/Base32.build/Objects-normal/arm64/Base32.o",
+    "swift-dependencies" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/Base32/build/Base32.build/Debug-iphoneos/Base32.build/Objects-normal/arm64/Base32.swiftdeps",
+    "swiftmodule" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/Base32/build/Base32.build/Debug-iphoneos/Base32.build/Objects-normal/arm64/Base32~partial.swiftmodule"
+  },
+  "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/Base32/Sources/Base32/shim.swift" : {
+    "const-values" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/Base32/build/Base32.build/Debug-iphoneos/Base32.build/Objects-normal/arm64/shim.swiftconstvalues",
+    "dependencies" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/Base32/build/Base32.build/Debug-iphoneos/Base32.build/Objects-normal/arm64/shim.d",
+    "diagnostics" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/Base32/build/Base32.build/Debug-iphoneos/Base32.build/Objects-normal/arm64/shim.dia",
+    "index-unit-output-path" : "/Base32.build/Debug-iphoneos/Base32.build/Objects-normal/arm64/shim.o",
+    "llvm-bc" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/Base32/build/Base32.build/Debug-iphoneos/Base32.build/Objects-normal/arm64/shim.bc",
+    "object" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/Base32/build/Base32.build/Debug-iphoneos/Base32.build/Objects-normal/arm64/shim.o",
+    "swift-dependencies" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/Base32/build/Base32.build/Debug-iphoneos/Base32.build/Objects-normal/arm64/shim.swiftdeps",
+    "swiftmodule" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/Base32/build/Base32.build/Debug-iphoneos/Base32.build/Objects-normal/arm64/shim~partial.swiftmodule"
+  },
+  "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/Base32/Sources/Base32/StringExtension.swift" : {
+    "const-values" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/Base32/build/Base32.build/Debug-iphoneos/Base32.build/Objects-normal/arm64/StringExtension.swiftconstvalues",
+    "dependencies" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/Base32/build/Base32.build/Debug-iphoneos/Base32.build/Objects-normal/arm64/StringExtension.d",
+    "diagnostics" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/Base32/build/Base32.build/Debug-iphoneos/Base32.build/Objects-normal/arm64/StringExtension.dia",
+    "index-unit-output-path" : "/Base32.build/Debug-iphoneos/Base32.build/Objects-normal/arm64/StringExtension.o",
+    "llvm-bc" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/Base32/build/Base32.build/Debug-iphoneos/Base32.build/Objects-normal/arm64/StringExtension.bc",
+    "object" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/Base32/build/Base32.build/Debug-iphoneos/Base32.build/Objects-normal/arm64/StringExtension.o",
+    "swift-dependencies" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/Base32/build/Base32.build/Debug-iphoneos/Base32.build/Objects-normal/arm64/StringExtension.swiftdeps",
+    "swiftmodule" : "/Users/tanishqdubey/Library/Developer/Xcode/DerivedData/Sesame-etiiixejixremoaarizcudluwcco/SourcePackages/checkouts/Base32/build/Base32.build/Debug-iphoneos/Base32.build/Objects-normal/arm64/StringExtension~partial.swiftmodule"
+  }
+}

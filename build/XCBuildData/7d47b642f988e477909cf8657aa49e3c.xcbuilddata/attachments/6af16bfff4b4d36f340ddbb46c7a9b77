@@ -1,0 +1,4 @@
+module BuyMeACoffee {
+header "BuyMeACoffee-Swift.h"
+export *
+}
